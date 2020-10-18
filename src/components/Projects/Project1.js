@@ -36,12 +36,14 @@ const useStyles = makeStyles(theme => ({
     imgcontainer: {
         // height: "300px",
         width: "100%",
-        [theme.breakpoints.up('md')]: {
+        [theme.breakpoints.up('lg')]: {
             // width: "20vw",
             // height: "20vw",
-            borderRadius: "8px"
+            borderRadius: "8px",
+            boxShadow: "0px 10px 31px 1px rgba(0,0,0,0.75)",
         },
         overflow: "hidden",
+        
     },
     img: {
         margin: "0 auto",
@@ -67,7 +69,7 @@ const useStyles = makeStyles(theme => ({
         '@media (max-height:768px)': {
             height: "35vw"
         },
-        display: "block"
+        display: "block",
     },
     flex: {
         [theme.breakpoints.up('xs')] : {
@@ -88,11 +90,13 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "none",
         color: "inherit",
         textAlign: "center",
-        transition: "all .2s linear",
+        transition: "all .3s ease",
+        backgroundColor: "#ffffffaa",
+        boxShadow: "3px 7px 12px -4px rgba(0,0,0,0.75)",
         "&:hover": {
-            transition: "all .1s ease",
+            transition: "all .3s ease",
             // backgroundColor: "#dceeff",
-            backgroundColor: "#eeeeeeaa"
+            backgroundColor: "#dceeff"
         }
     },
     break: {
@@ -129,16 +133,19 @@ const useStyles = makeStyles(theme => ({
         margin: "5px",
         border: "1px solid #ccc",
         borderRadius: "5px",
+        boxShadow: "3px 7px 12px -4px rgba(0,0,0,0.75)",
         [theme.breakpoints.up('xs')]: {
             width: "100%",
         },
         [theme.breakpoints.up('sm')]: {
             width: "80%"
         },
+        transition: "all .3s ease",
+        backgroundColor: "#ffffffaa",
         "&:hover": {
-            transition: "all .1s ease",
+            transition: "all .3s ease",
             // backgroundColor: "#dceeff",
-            backgroundColor: "#eeeeeeaa"
+            backgroundColor: "#dceeff"
         }
     }
 }))

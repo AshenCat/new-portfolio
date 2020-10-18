@@ -67,14 +67,14 @@ function Wipes() {
                             from={{x:'100%'}}
                             to={{x:'0%'}}>
                             <div className="panel panel2">
-                                3
+                                <Project1 />
                             </div>
                         </Tween>
                         <Tween
                             from={{y:'-100%'}}
                             to={{y:'0%'}}>
                             <div className="panel panel3">
-                                4
+                                <Project1 />
                             </div>
                         </Tween>
                     </Timeline>
