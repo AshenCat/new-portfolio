@@ -21,13 +21,21 @@ const useStyles = makeStyles(theme => ({
             borderBottom: "1px solid black",
             textAlign: "center",
         // },
-
+    },
+    contrib: {
+        // [theme.breakpoints.up('md')]: {
+            width: "80vw",
+            borderTop: "1px solid black",
+            textAlign: "center",
+            marginTop: ".75rem"
+        // },
     },
     mt5px: {
         marginTop: "5px",
     },
     imgcontainer: {
         // height: "300px",
+        width: "100%",
         [theme.breakpoints.up('md')]: {
             // width: "20vw",
             // height: "20vw",
@@ -36,8 +44,10 @@ const useStyles = makeStyles(theme => ({
         overflow: "hidden",
     },
     img: {
+        margin: "0 auto",
+        textAlign: "center",
         [theme.breakpoints.up('sm')]: {
-            height: "40vw"
+            height: "30vw"
         },
         [theme.breakpoints.up('md')]: {
             height: "25vw"
@@ -48,14 +58,23 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.down('sm')]:{
             maxWidth: "100vw"
         },
-        display: "inline"
+        '@media (max-height:600px)': {
+            height: "30vw"
+        },
+        '@media (max-height:650px)': {
+            height: "28vw"
+        },
+        '@media (max-height:768px)': {
+            height: "35vw"
+        },
+        display: "block"
     },
     flex: {
         [theme.breakpoints.up('xs')] : {
-        marginTop: 28,
+        paddingTop: 28,
         },
         [theme.breakpoints.up('sm')]: {
-            marginTop: 64,
+            paddingTop: 64,
             // marginBottom: "1rem"
         },
         width: "100vw",
@@ -69,7 +88,9 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "none",
         color: "inherit",
         textAlign: "center",
+        transition: "all .2s linear",
         "&:hover": {
+            transition: "all .1s ease",
             // backgroundColor: "#dceeff",
             backgroundColor: "#eeeeeeaa"
         }
@@ -88,12 +109,37 @@ const useStyles = makeStyles(theme => ({
         },
     },
     mdgap: {
-        [theme.breakpoints.up('sm')]: {
-            marginTop: "1rem"
+        [theme.breakpoints.up('xs')]: {
+            marginTop: ".5rem"
         },
         [theme.breakpoints.up('md')]: {
             marginTop: 0
         },
+    },
+    noshowwhensmol: {
+        // '@media (max-height:600px)': {
+        //     display: "none"
+        // }
+    },
+    anchor: {
+        listStyle: "none",
+        color: "inherit",
+        textDecoration: "none",
+        padding: "5px",
+        margin: "5px",
+        border: "1px solid #ccc",
+        borderRadius: "5px",
+        [theme.breakpoints.up('xs')]: {
+            width: "100%",
+        },
+        [theme.breakpoints.up('sm')]: {
+            width: "80%"
+        },
+        "&:hover": {
+            transition: "all .1s ease",
+            // backgroundColor: "#dceeff",
+            backgroundColor: "#eeeeeeaa"
+        }
     }
 }))
 
@@ -127,11 +173,11 @@ const overrideTheme = createMuiTheme({
                     fontSize: ".9rem",
                     lineHeight: 1.3
                 },
-                // [breakpoints.up('sm')]: {
-                    // fontSize: "1.1rem"
-                // },
                 [breakpoints.up('sm')]: {
-                    fontSize: "1.25rem"
+                    fontSize: "1.1rem"
+                },
+                [breakpoints.up('md')]: {
+                    fontSize: "1.15rem"
                 },
             },
             h5: {
@@ -151,14 +197,18 @@ function Project1() {
         <Grid container justify="center" className={classes.break}>
             <Typography variant="h5" className={classes.title}>Restaurant Menu App</Typography>
         </Grid>
+
+
         <Grid container justify="center" className={classes.break1}>
             <Grid item xs={12} md={5}
                 container
                 justify="center"
                 className={classes.imgcontainer}>
-                <div className={classes.imgcontainer}>
+                {/* <img src={resto1} alt="restaurant" draggable="false" className={classes.img}/>  */}
+                <AutoPlaySwipeableViews slideStyle={{"overflow":"hidden"}}>
                     <img src={resto1} alt="restaurant" draggable="false" className={classes.img}/> 
-                </div>
+                    <img src={resto2} alt="restaurant" draggable="false" className={classes.img}/> 
+                </AutoPlaySwipeableViews>
             </Grid>
             <Grid item container direction="column" justify="space-evenly" xs={12} md={4}>
                 <Grid item className={classes.mdgap}>
@@ -187,42 +237,36 @@ function Project1() {
                 </Grid>
             </Grid>
         </Grid>
+
+
         <Grid container justify="center">
             <Grid container item xs={12} justify="center">
-                <Typography variant="overline">Contributors:</Typography>
+                <Typography variant="overline" className={classes.contrib}>Contributors:</Typography>
             </Grid>
             <Grid container item xs={12} justify="center">
-                <Grid container item xs={6} md={2} >
-                    <Grid container item xs={12} justify="center">
-                        <Typography variant="subtitle1">Francis Victa</Typography>
-                    </Grid>
-                    <Grid container item xs={12} justify="center">
-                        <Typography variant="subtitle2"><small>Project Lead</small></Typography>
-                    </Grid>
+                <Grid container item xs={6} md={2} justify="center">
+                <a href="https://github.com/victafrancis" className={classes.anchor} style={{textAlign: "center"}}>
+                    <Typography variant="subtitle1">Francis Victa</Typography>
+                    <Typography variant="subtitle2"><small>Project Lead</small></Typography>
+                </a>
                 </Grid>
-                <Grid container item xs={6} md={2} className={classes.mt5px}>
-                    <Grid item container xs={12} justify="center">
+                <Grid container item xs={6} md={2} justify="center">
+                    <a href="https://github.com/lilianyangc" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Lilian Yang</Typography>
-                    </Grid>
-                    <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
-                    </Grid>
+                    </a>
                 </Grid>
-                <Grid container item xs={6} md={2} className={classes.mt5px}>
-                    <Grid item container xs={12} justify="center">
+                <Grid container item xs={6} md={2} justify="center">
+                    <a href="https://github.com/ashencat" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Klifford Agujar</Typography>
-                    </Grid>
-                    <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
-                    </Grid>
+                    </a>
                 </Grid>
-                <Grid container item xs={6} md={2} className={classes.mt5px}>
-                    <Grid item container xs={12} justify="center">
+                <Grid container item xs={6} md={2} justify="center">
+                    <a href="https://github.com/NaguitSirAngel" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Sir Angel Naguit</Typography>
-                    </Grid>
-                    <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle2"><small>Part Time</small></Typography>
-                    </Grid>
+                    </a>
                 </Grid>
             </Grid>
         </Grid>
