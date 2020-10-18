@@ -15,14 +15,13 @@ const useStyles = makeStyles(theme => ({
     grid1: {
         backgroundColor: "#fff"
     },
-    grid2: {
-        backgroundColor: "#CCC"
-    },
-    grid3: {
-        backgroundColor: "#999"
-    },
-    grid4: {
-        backgroundColor: "#666"
+    title: {
+        // [theme.breakpoints.up('md')]: {
+            width: "80vw",
+            borderBottom: "1px solid black",
+            textAlign: "center",
+        // },
+
     },
     mt5px: {
         marginTop: "5px",
@@ -38,7 +37,13 @@ const useStyles = makeStyles(theme => ({
     },
     img: {
         [theme.breakpoints.up('sm')]: {
-            height: "20vw"
+            height: "40vw"
+        },
+        [theme.breakpoints.up('md')]: {
+            height: "25vw"
+        },
+        [theme.breakpoints.up('lg')]: {
+            height: "28vw"
         },
         [theme.breakpoints.down('sm')]:{
             maxWidth: "100vw"
@@ -57,17 +62,37 @@ const useStyles = makeStyles(theme => ({
         height: "100vh"
     },
     outlineButton: {
+        paddingTop: "5px",
         border: "1px solid #aaa",
         borderRadius: "5px",
-        paddingTop: "5px",
-        backgroundColor: "#dceeff",
+        width: "100%",
+        textDecoration: "none",
+        color: "inherit",
+        textAlign: "center",
         "&:hover": {
-            backgroundColor: "#666"
+            // backgroundColor: "#dceeff",
+            backgroundColor: "#eeeeeeaa"
         }
     },
     break: {
+        [theme.breakpoints.up('xs')] : {
+            marginBottom: ".75rem",
+        },
         [theme.breakpoints.up('sm')] : {
             marginBottom: "2rem",
+        },
+    },
+    break1: {
+        [theme.breakpoints.up('sm')] : {
+            marginBottom: "1rem",
+        },
+    },
+    mdgap: {
+        [theme.breakpoints.up('sm')]: {
+            marginTop: "1rem"
+        },
+        [theme.breakpoints.up('md')]: {
+            marginTop: 0
         },
     }
 }))
@@ -102,10 +127,10 @@ const overrideTheme = createMuiTheme({
                     fontSize: ".9rem",
                     lineHeight: 1.3
                 },
-                [breakpoints.up('md')]: {
-                    fontSize: "1.1rem"
-                },
-                [breakpoints.up('lg')]: {
+                // [breakpoints.up('sm')]: {
+                    // fontSize: "1.1rem"
+                // },
+                [breakpoints.up('sm')]: {
                     fontSize: "1.25rem"
                 },
             },
@@ -123,8 +148,10 @@ function Project1() {
     return (
         <Grid container direction="column" justify="center" className={classes.flex} >
         <ThemeProvider theme={overrideTheme}>
-        <Grid container justify="center" className={classes.break}><Typography variant="h5">Restaurant Menu App</Typography></Grid>
         <Grid container justify="center" className={classes.break}>
+            <Typography variant="h5" className={classes.title}>Restaurant Menu App</Typography>
+        </Grid>
+        <Grid container justify="center" className={classes.break1}>
             <Grid item xs={12} md={5}
                 container
                 justify="center"
@@ -134,7 +161,7 @@ function Project1() {
                 </div>
             </Grid>
             <Grid item container direction="column" justify="space-evenly" xs={12} md={4}>
-                <Grid item>
+                <Grid item className={classes.mdgap}>
                     <Container>
                         <Typography variant="subtitle1">
                             FREELANCE - The goal of the project is to help restaurant owners reduce employee-customer contact within business grounds by upgrading from an old physical menu, to an online menu where customers just have to scan a QR code to access the menu.
@@ -145,22 +172,27 @@ function Project1() {
                     <Grid item container xs={12} justify="center">
                         <Typography variant="overline">Links:</Typography>
                     </Grid>
-                    <Grid item container xs={4} justify="center" direction="column" alignItems="center" className={classes.outlineButton}>
-                        <Grid><GitHub /></Grid>
-                        <Grid><Typography>Github</Typography></Grid>
+                    <Grid item container xs={4}>
+                        <a href="#a" className={classes.outlineButton}>
+                            <div style={{textAlign: "center"}}><GitHub /></div>
+                            <Typography>Github</Typography>
+                        </a>
                     </Grid>
-                    <Grid item container xs={4} justify="center" direction="column" alignItems="center" className={classes.outlineButton}>
-                        <Grid><ComputerOutlined /></Grid>
-                        <Grid><Typography>Demo</Typography></Grid></Grid>
+                    <Grid item container xs={4}>
+                        <a href="#a" className={classes.outlineButton}>
+                            <div style={{textAlign: "center"}}><ComputerOutlined /></div>
+                            <Typography>Demo</Typography>
+                        </a>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
-        <Grid container justify="center" className={classes.break}>
-            <Grid container item xs={12} md={4}>
-                <Grid container item xs={12} justify="center">
-                    <Typography variant="overline">Contributors:</Typography>
-                </Grid>
-                <Grid container item xs={6}>
+        <Grid container justify="center">
+            <Grid container item xs={12} justify="center">
+                <Typography variant="overline">Contributors:</Typography>
+            </Grid>
+            <Grid container item xs={12} justify="center">
+                <Grid container item xs={6} md={2} >
                     <Grid container item xs={12} justify="center">
                         <Typography variant="subtitle1">Francis Victa</Typography>
                     </Grid>
@@ -168,7 +200,7 @@ function Project1() {
                         <Typography variant="subtitle2"><small>Project Lead</small></Typography>
                     </Grid>
                 </Grid>
-                <Grid container item xs={6} className={classes.mt5px}>
+                <Grid container item xs={6} md={2} className={classes.mt5px}>
                     <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle1">Lilian Yang</Typography>
                     </Grid>
@@ -176,7 +208,7 @@ function Project1() {
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
                     </Grid>
                 </Grid>
-                <Grid container item xs={6} className={classes.mt5px}>
+                <Grid container item xs={6} md={2} className={classes.mt5px}>
                     <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle1">Klifford Agujar</Typography>
                     </Grid>
@@ -184,7 +216,7 @@ function Project1() {
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
                     </Grid>
                 </Grid>
-                <Grid container item xs={6} className={classes.mt5px}>
+                <Grid container item xs={6} md={2} className={classes.mt5px}>
                     <Grid item container xs={12} justify="center">
                         <Typography variant="subtitle1">Sir Angel Naguit</Typography>
                     </Grid>
