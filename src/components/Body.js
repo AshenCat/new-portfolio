@@ -85,6 +85,11 @@ function Body() {
             <section>
                 <Wipes />
             </section>
+            <section className={classes.divider}>
+                <Typography variant="h4" className={classes.textCenter}>
+                    Tech
+                </Typography>
+            </section>
         </>
     )
 }

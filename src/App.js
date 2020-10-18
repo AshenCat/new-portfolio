@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css'
 import Body from './components/Body';
 import Nav from './components/Nav'
+import Footer from './components/Footer';
 
 const theme = createMuiTheme({
   ...this,
@@ -24,6 +25,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/" component={Body} />
       </BrowserRouter>
+      <Footer />
     </ThemeProvider>
   );
 }
