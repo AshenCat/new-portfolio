@@ -1,6 +1,6 @@
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
-import me from '../assets/Me.JPG'
+import imghr from '../assets/imghr.JPG'
 import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
 import Wipes from './Wipes';
 
@@ -62,7 +62,7 @@ function Body() {
                 <Typography variant="h4" className={classes.textCenter}>Bio</Typography>
                 <Grid container justify="flex-start" alignItems="center" className={classes.mt2}>
                     <Grid item sm={12} md={4} lg={5} container justify="center">
-                        <img src={me} alt="Kreefford" className={classes.myImg} />
+                        <img src={imghr} alt="Kreefford" className={classes.myImg} />
                     </Grid>
                     <Grid item sm={12} md={6} lg={5}>
                         <Typography variant="subtitle1" className={classes.smolTypography}>
