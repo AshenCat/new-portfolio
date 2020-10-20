@@ -1,4 +1,4 @@
-import { createMuiTheme, Grid, makeStyles, ThemeProvider, Typography, Container, Hidden } from '@material-ui/core'
+import { createMuiTheme, Grid, makeStyles, ThemeProvider, Typography, Container } from '@material-ui/core'
 import React from 'react'
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
@@ -16,29 +16,22 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: "#fff"
     },
     title: {
-        // [theme.breakpoints.up('md')]: {
-            width: "80vw",
-            borderBottom: "1px solid black",
-            textAlign: "center",
-        // },
+        width: "80vw",
+        borderBottom: "1px solid black",
+        textAlign: "center",
     },
     contrib: {
-        // [theme.breakpoints.up('md')]: {
-            width: "80vw",
-            borderTop: "1px solid black",
-            textAlign: "center",
-            marginTop: ".75rem"
-        // },
+        width: "80vw",
+        borderTop: "1px solid black",
+        textAlign: "center",
+        marginTop: ".75rem"
     },
     mt5px: {
         marginTop: "5px",
     },
     imgcontainer: {
-        // height: "300px",
         width: "100%",
         [theme.breakpoints.up('lg')]: {
-            // width: "20vw",
-            // height: "20vw",
             borderRadius: "8px",
             boxShadow: "0px 10px 31px 1px rgba(0,0,0,0.75)",
         },
@@ -77,7 +70,6 @@ const useStyles = makeStyles(theme => ({
         },
         [theme.breakpoints.up('sm')]: {
             paddingTop: 64,
-            // marginBottom: "1rem"
         },
         width: "100vw",
         height: "100vh"
@@ -92,10 +84,9 @@ const useStyles = makeStyles(theme => ({
         textAlign: "center",
         transition: "all .3s ease",
         backgroundColor: "#ffffffaa",
-        boxShadow: "3px 7px 12px -4px rgba(0,0,0,0.75)",
+        boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
         "&:hover": {
             transition: "all .3s ease",
-            // backgroundColor: "#dceeff",
             backgroundColor: "#dceeff"
         }
     },
@@ -120,11 +111,6 @@ const useStyles = makeStyles(theme => ({
             marginTop: 0
         },
     },
-    noshowwhensmol: {
-        // '@media (max-height:600px)': {
-        //     display: "none"
-        // }
-    },
     anchor: {
         listStyle: "none",
         color: "inherit",
@@ -144,7 +130,6 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: "#ffffffaa",
         "&:hover": {
             transition: "all .3s ease",
-            // backgroundColor: "#dceeff",
             backgroundColor: "#dceeff"
         }
     }
@@ -152,13 +137,6 @@ const useStyles = makeStyles(theme => ({
 
 const overrideTheme = createMuiTheme({
     overrides: {
-        // MuiPaper:{
-        //     rounded:{
-        //         // [theme.breakpoints.down('md')]:{
-        //             borderRadius: 0,
-        //         // }
-        //     }
-        // },
         MuiTypography:{
             subtitle2: {
                 [breakpoints.down('sm')]: {
@@ -172,7 +150,6 @@ const overrideTheme = createMuiTheme({
                 },
                 [breakpoints.up('sm')]: {
                     fontSize: "1.1rem",
-                    // lineHeight: 1.5
                 },
             },
             subtitle1: {
@@ -211,7 +188,6 @@ function Project1() {
                 container
                 justify="center"
                 className={classes.imgcontainer}>
-                {/* <img src={resto1} alt="restaurant" draggable="false" className={classes.img}/>  */}
                 <AutoPlaySwipeableViews slideStyle={{"overflow":"hidden"}}>
                     <img src={resto1} alt="restaurant" draggable="false" className={classes.img}/> 
                     <img src={resto2} alt="restaurant" draggable="false" className={classes.img}/> 
@@ -230,13 +206,13 @@ function Project1() {
                         <Typography variant="overline">Links:</Typography>
                     </Grid>
                     <Grid item container xs={4}>
-                        <a href="#a" className={classes.outlineButton}>
+                        <a href="https://github.com/AshenCat/rm_client" className={classes.outlineButton}>
                             <div style={{textAlign: "center"}}><GitHub /></div>
                             <Typography>Github</Typography>
                         </a>
                     </Grid>
                     <Grid item container xs={4}>
-                        <a href="#a" className={classes.outlineButton}>
+                        <a href="https://www.futuredining.ca" className={classes.outlineButton}>
                             <div style={{textAlign: "center"}}><ComputerOutlined /></div>
                             <Typography>Demo</Typography>
                         </a>
