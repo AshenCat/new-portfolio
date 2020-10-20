@@ -6,6 +6,7 @@ import { Controller, Scene } from 'react-scrollmagic'
 import './wipes.css'
 import prgimage from '../assets/projects.jpg'
 import Project1 from './Projects/Project1';
+import Project2 from './Projects/Project2';
 
 const useStyle = makeStyles( theme => ({
     intro: {
@@ -19,7 +20,8 @@ const useStyle = makeStyles( theme => ({
     },
     introTxt: {
         color: "#000",
-        padding: "1rem"
+        padding: "1rem",
+        boxShadow: "0px 1px 10px 0px rgba(0,0,0,0.12)"
     }
 }));
 
@@ -67,7 +69,7 @@ function Wipes() {
                             from={{x:'100%'}}
                             to={{x:'0%'}}>
                             <div className="panel panel2">
-                                <Project1 />
+                                <Project2 />
                             </div>
                         </Tween>
                         <Tween
