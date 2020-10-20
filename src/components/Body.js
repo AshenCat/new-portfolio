@@ -1,6 +1,6 @@
 import { Container, Grid, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
-import imghr from '../assets/imghr.JPG'
+import imghr from '../assets/imghr0.jpg'
 import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
 import Wipes from './Wipes';
 

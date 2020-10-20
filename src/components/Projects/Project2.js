@@ -4,7 +4,7 @@ import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
 import inv from '../../assets/inventory.jpg'
-import ims from '../../assets/ReactIMS.JPG'
+import ims from '../../assets/ReactIMS0.jpg'
 import { GitHub } from '@material-ui/icons';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
