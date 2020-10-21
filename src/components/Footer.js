@@ -1,4 +1,4 @@
-import { Button, Container, createMuiTheme, Grid, makeStyles, TextField, ThemeProvider, Typography } from '@material-ui/core'
+import { Button, Container, createMuiTheme, Grid, Hidden, makeStyles, TextField, ThemeProvider, Typography } from '@material-ui/core'
 import React from 'react'
 import emailjs from 'emailjs-com';
 
@@ -18,6 +18,7 @@ const useStyle = makeStyles( theme => ({
     },
     txt: {
         lineHeight: 1,
+        fontSize: ".75rem"
     },
     form: {
         // backgroundColor: '#fff'
@@ -64,7 +65,7 @@ function Footer() {
             <ThemeProvider theme={overrideTheme}>
             <Container>
                 <Typography variant="h4" className={classes.head}>Contact </Typography>
-                <form onSubmit={onclick}>
+                <form onSubmit={onclick} id="form">
                 <Grid container direction="row" justify="space-evenly">
                     <Grid container item direction="column" xs={12} md={6}>
                         <Grid item xs={12}>
@@ -91,6 +92,9 @@ function Footer() {
                         </Grid>
                     </Grid>
                     <Grid container item xs={12} md={4} direction="column" justify="space-between">
+                        <Hidden smUp>
+                            <div style={{marginTop: "5vh"}} />
+                        </Hidden>
                         <Typography variant="subtitle1">Email: forddagujar95@gmail.com</Typography>
                         <Typography variant="subtitle1" className={classes.txt}>I am usually busy, but I'll try to respond as soon as I can. Don't forget to add your email if you expect a reply.</Typography>
                         <Grid item>

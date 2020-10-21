@@ -1,7 +1,8 @@
-import { Container, Grid, makeStyles, Typography } from '@material-ui/core'
+import { Container, Grid, makeStyles, Paper, Typography } from '@material-ui/core'
 import React from 'react'
 import imghr from '../assets/imghr0.jpg'
 import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
+import { Link } from "react-scroll";
 import Wipes from './Wipes';
 
 const useStyle = makeStyles( theme => ({
@@ -51,6 +52,13 @@ const useStyle = makeStyles( theme => ({
         backgroundAttachment: "fixed",
         backgroundSize: "cover",
         height: "500px"
+    },
+    visited: {
+        cursor: 'pointer',
+        color: 'rgb(1,0,238)',
+        '&:visited': {
+            color: 'rgb(1,0,238)'
+        }
     }
 }))
 
@@ -78,13 +86,21 @@ function Body() {
                 <Container style={{"marginTop": "1rem"}}>
                     <Grid container justify="center" spacing={3}>
                         <Grid item>
-                            <GitHub xs={1} style={{ fontSize: 60, color: "rgb(0,123,255)" }}/>
+                            <a href="https://github.com/ashencat" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
-                            <LinkedIn xs={1} style={{ fontSize: 60, color: "rgb(0,123,255)" }}/>
+                            <a href="https://www.linkedin.com/in/klifford-agujar-8714a41a9/" className={classes.visited}><LinkedIn style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
-                            <AlternateEmail xs={1} style={{ fontSize: 60, color: "rgb(0,123,255)" }}/>
+                            <Link   
+                                to="form" 
+                                spy={true} 
+                                smooth={true}
+                                offset={-70}
+                                duration={1500} 
+                                className={classes.visited}>
+                                    <AlternateEmail style={{ fontSize: 60 }}/>
+                            </Link>
                         </Grid>
                     </Grid>
                 </Container>

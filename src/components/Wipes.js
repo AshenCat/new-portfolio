@@ -76,7 +76,11 @@ function Wipes() {
                             from={{y:'-100%'}}
                             to={{y:'0%'}}>
                             <div className="panel panel3">
-                                <Project1 />
+                                <Grid container direction="column" justify="center" style={{height: "100%"}}>
+                                    <Grid item container justify="center">
+                                        <Typography variant="h4">Under Construction</Typography>
+                                    </Grid>
+                                </Grid>
                             </div>
                         </Tween>
                     </Timeline>
