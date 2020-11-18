@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css'
 import Body from './components/Body';
-import Nav from './components/Nav'
+// import Nav from './components/Nav'
 import Footer from './components/Footer';
 
 const theme = createMuiTheme({
@@ -21,7 +21,7 @@ console.log(theme)
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Nav />
+      {/* <Nav /> */}
       <BrowserRouter>
         <Route exact path="/" component={Body} />
       </BrowserRouter>

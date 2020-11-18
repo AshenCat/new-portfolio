@@ -65,12 +65,12 @@ const useStyles = makeStyles(theme => ({
         display: "block",
     },
     flex: {
-        [theme.breakpoints.up('xs')] : {
-        paddingTop: 28,
-        },
-        [theme.breakpoints.up('sm')]: {
-            paddingTop: 64,
-        },
+        // [theme.breakpoints.up('xs')] : {
+        // paddingTop: 28,
+        // },
+        // [theme.breakpoints.up('sm')]: {
+        //     paddingTop: 64,
+        // },
         width: "100vw",
         height: "100vh"
     },
@@ -197,7 +197,7 @@ function Project1() {
                 <Grid item className={classes.mdgap}>
                     <Container>
                         <Typography variant="subtitle1">
-                            FREELANCE - The goal of the project is to help restaurant owners reduce employee-customer contact within business grounds by upgrading from an old physical menu, to an online menu where customers just have to scan a QR code to access the menu.
+                            FREELANCE - A simple project to help a restaurant owner reduce employee-customer contact within business grounds by upgrading from an old physical menu, to an online menu where customers just have to scan a QR code to access the menu.
                         </Typography>
                     </Container>
                 </Grid>
