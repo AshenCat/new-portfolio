@@ -88,7 +88,8 @@ const useStyles = makeStyles(theme => ({
         boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
         "&:hover": {
             transition: "all .3s ease",
-            backgroundColor: "#dceeff"
+            backgroundColor: "#c8c8c8",
+            color: "WhiteSmoke",
         }
     },
     break: {
@@ -120,7 +121,7 @@ const useStyles = makeStyles(theme => ({
         margin: "5px",
         border: "1px solid #ccc",
         borderRadius: "5px",
-        boxShadow: "3px 7px 12px -4px rgba(0,0,0,0.75)",
+        boxShadow: "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
         [theme.breakpoints.up('xs')]: {
             width: "100%",
         },
@@ -131,7 +132,8 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: "#ffffffaa",
         "&:hover": {
             transition: "all .3s ease",
-            backgroundColor: "#dceeff"
+            backgroundColor: "#c8c8c8",
+            color: "WhiteSmoke",
         }
     }
 }))

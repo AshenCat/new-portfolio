@@ -1,6 +1,7 @@
-import { Button, Container, createMuiTheme, Grid, Hidden, makeStyles, TextField, ThemeProvider, Typography } from '@material-ui/core'
+import { Button, Container, createMuiTheme, Grid, Hidden, makeStyles, Snackbar, TextField, ThemeProvider, Typography } from '@material-ui/core'
 import React from 'react'
 import emailjs from 'emailjs-com';
+import MuiAlert from '@material-ui/lab/Alert';
 
 const useStyle = makeStyles( theme => ({
     head: {
@@ -50,6 +51,8 @@ const overrideTheme = createMuiTheme({
 function Footer() {
     const classes = useStyle();
 
+    const [open, setOpen] = React.useState(false)
+
     const onclick = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_2t4plzk', 'template_bf3p0f2', e.target, 'user_HRwVJ34l6Nrlcns0adWoq')
@@ -58,7 +61,7 @@ function Footer() {
         }, (error) => {
             console.log("err: ", error.text);
         });
-        console.log(e.target)
+        setOpen(true)
     }
     return (
         <footer className={classes.footer}>
@@ -96,7 +99,9 @@ function Footer() {
                             <div style={{marginTop: "5vh"}} />
                         </Hidden>
                         <Typography variant="subtitle1">Email: forddagujar95@gmail.com</Typography>
-                        <Typography variant="subtitle1" className={classes.txt}>I am usually busy, but I'll try to respond as soon as I can. Don't forget to add your email if you expect a reply.</Typography>
+                            <Typography variant="subtitle1" className={classes.txt}>
+                                I'll try to respond as soon as I can. Don't forget to add your email if you expect a reply.
+                            </Typography>
                         <Grid item>
                             <hr />
                             <Typography variant="h6">
@@ -112,6 +117,16 @@ function Footer() {
                 </form>
             </Container>
             </ThemeProvider>
+            <Snackbar
+                open={open}
+                autoHideDuration={6000}
+                onClose={()=>setOpen(false)}>
+                    <MuiAlert
+                        onClose={()=>setOpen(false)}
+                        severity="success">
+                            Message Sent!
+                    </MuiAlert>
+            </Snackbar>
         </footer>
     )
 }
