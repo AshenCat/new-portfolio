@@ -1,9 +1,10 @@
-import { Container, Grid, makeStyles, Paper, Typography } from '@material-ui/core'
+import { Container, Grid, makeStyles, Typography } from '@material-ui/core'
 import React from 'react'
-import imghr from '../assets/imghr0.jpg'
+// import imghr from '../assets/imghr0.jpg'
 import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
 import { Link } from "react-scroll";
 import Wipes from './Wipes';
+import prgimage from '../assets/projects.jpg'
 
 const useStyle = makeStyles( theme => ({
     textCenter : {
@@ -40,11 +41,14 @@ const useStyle = makeStyles( theme => ({
         border: "1px solid #e2e8f0",
     },
     bio: {
-        backgroundColor: "#ffffff",
-        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23e6e6e6' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23cccccc'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E")`,
-        border: "0px solid #e2e8f0",
-        borderBottomWidth: "1px",
-        backgroundAttachment: "fixed",
+        height:"100vh",
+        backgroundImage: `url(${prgimage})`,
+        // backgroundAttachment: 'fixed',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        position: 'relative',
+        color: "#fff"
     },
     tech: {
         backgroundColor: "#dceeff",
@@ -59,6 +63,43 @@ const useStyle = makeStyles( theme => ({
         '&:visited': {
             color: 'rgb(1,0,238)'
         }
+    },
+    container: {
+        height: "inherit",
+    },
+    headNameContainer: {
+        borderBottom: "6px solid #0171B5", 
+        [theme.breakpoints.up("sm")]:{
+            borderBottom: "8px solid #0171B5", 
+            width: "70%",
+        },
+        
+        [theme.breakpoints.up("lg")]:{
+            width: "40%",
+        },
+    },
+    name: {
+        color: "inherit",
+        [theme.breakpoints.up("lg")]: {
+            fontSize: "5rem"
+        }
+    },
+    title: {
+        color: "inherit",
+        [theme.breakpoints.up("lg")]: {
+            fontSize: "3rem"
+        }
+    },
+    nav: {
+        borderLeft: "5px solid #0171B5",
+        position: "absolute",
+        top: "15px",
+        paddingLeft: "1rem"
+        // backgroundColor: '#fff',
+    },
+    navItem: {
+        zIndex: "5",
+        fontFamily: '"Courier New", Courier, monospace',
     }
 }))
 
@@ -67,14 +108,16 @@ function Body() {
     return (
         <>
             <section className={classes.bio}>
-                <Typography variant="h4" className={classes.textCenter}>Bio</Typography>
-                <Grid container justify="flex-start" alignItems="center" className={classes.mt2}>
-                    <Grid item sm={12} md={4} lg={5} container justify="center">
-                        <img src={imghr} alt="Kreefford" className={classes.myImg} />
+                <nav className={classes.nav}>
+                    <Typography variant="h4" className={classes.navItem}>@KA</Typography>   
+                </nav>
+                <Grid container direction="column" justify="center" alignItems="center" className={classes.container}>
+                    <Grid item className={classes.headNameContainer}>
+                        <Typography align="center" variant="h2" className={classes.name}>Klifford Agujar</Typography>
                     </Grid>
-                    <Grid item sm={12} md={6} lg={5}>
-                        <Typography variant="subtitle1" className={classes.smolTypography}>
-                            I am a passionate web developer with a curious mindset. The internet has always piqued my interest which led me to pursue a career in web development. I have worked on several small-scale projects like a restaurant online menu app and an Instagram clone using MERN stack and Laravel/Vue stack respectively. Life is all about improving, thus, I am taking every opportunity to expand my technical skills and necessary experience needed in the future.
+                    <Grid item>
+                        <Typography align="center" variant="h4" className={classes.title}>
+                            Full Stack Developer
                         </Typography>
                     </Grid>
                 </Grid>
@@ -86,10 +129,10 @@ function Body() {
                 <Container style={{"marginTop": "1rem"}}>
                     <Grid container justify="center" spacing={3}>
                         <Grid item>
-                            <a href="https://github.com/ashencat" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
+                            <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
-                            <a href="https://www.linkedin.com/in/klifford-agujar-8714a41a9/" className={classes.visited}><LinkedIn style={{ fontSize: 60 }}/></a>
+                            <a href="https://www.linkedin.com/in/klifford-agujar-8714a41a9/" target="_blank" rel="noopener noreferrer" className={classes.visited}><LinkedIn style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
                             <Link   

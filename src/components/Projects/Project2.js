@@ -209,7 +209,7 @@ function Project1() {
                         <Typography variant="overline">Links:</Typography>
                     </Grid>
                     <Grid item container>
-                        <a href="#https://github.com/AshenCat/capstone-abc-store" className={classes.outlineButton}>
+                        <a href="#https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className={classes.outlineButton}>
                             <div style={{textAlign: "center"}}><GitHub /></div>
                             <Typography>Github</Typography>
                         </a>
@@ -225,19 +225,19 @@ function Project1() {
             </Grid>
             <Grid container item xs={12} justify="center">
                 <Grid container item xs={6} md={2} justify="center">
-                <a href="https://github.com/kevin-hy" className={classes.anchor} style={{textAlign: "center"}}>
+                <a href="https://github.com/kevin-hy" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                     <Typography variant="subtitle1">Kevin Hy</Typography>
                     <Typography variant="subtitle2"><small>Project Manager</small></Typography>
                 </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/itbel" className={classes.anchor} style={{textAlign: "center"}}>
+                    <a href="https://github.com/itbel" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Igor T Belem</Typography>
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
                     </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/ashencat" className={classes.anchor} style={{textAlign: "center"}}>
+                    <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Klifford Agujar</Typography>
                         <Typography variant="subtitle2"><small>Lead Developer</small></Typography>
                     </a>

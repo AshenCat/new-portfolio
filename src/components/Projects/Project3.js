@@ -3,9 +3,9 @@ import React from 'react'
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
-import resto2 from '../../assets/resto.png'
-import resto1 from '../../assets/2.jpg'
-import { GitHub, ComputerOutlined } from '@material-ui/icons';
+import resto1 from '../../assets/coco.png'
+import resto2 from '../../assets/python.png'
+// import { GitHub, ComputerOutlined } from '@material-ui/icons';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -179,7 +179,7 @@ function Project1() {
         <Grid container direction="column" justify="center" className={classes.flex} >
         <ThemeProvider theme={overrideTheme}>
         <Grid container justify="center" className={classes.break}>
-            <Typography variant="h5" className={classes.title}>Restaurant Menu App</Typography>
+            <Typography variant="h5" className={classes.title}>Python object detection</Typography>
         </Grid>
 
 
@@ -197,26 +197,9 @@ function Project1() {
                 <Grid item className={classes.mdgap}>
                     <Container>
                         <Typography variant="subtitle1">
-                            FREELANCE - A simple project to help a restaurant owner reduce employee-customer contact within business grounds. The goal is to make a menu that is user-centric for good custormer experience.
+                           COLLEGE - Whilst python isn't my most comfortable language, I've had a good time doing this project. There are lots of good opensource neural networks out there and this project utilizes cocodata set. The neural network has been taught to recognize what is on the image and prints it out. The goal is to expand this and make it recognize real time video feeds.
                         </Typography>
                     </Container>
-                </Grid>
-                <Grid item container justify="space-evenly">
-                    <Grid item container xs={12} justify="center">
-                        <Typography variant="overline">Links:</Typography>
-                    </Grid>
-                    <Grid item container xs={4}>
-                        <a href="https://github.com/AshenCat/rm_client" target="_blank" rel="noopener noreferrer" className={classes.outlineButton}>
-                            <div style={{textAlign: "center"}}><GitHub /></div>
-                            <Typography>Github</Typography>
-                        </a>
-                    </Grid>
-                    <Grid item container xs={4}>
-                        <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className={classes.outlineButton}>
-                            <div style={{textAlign: "center"}}><ComputerOutlined /></div>
-                            <Typography>Demo</Typography>
-                        </a>
-                    </Grid>
                 </Grid>
             </Grid>
         </Grid>
@@ -224,21 +207,9 @@ function Project1() {
 
         <Grid container justify="center">
             <Grid container item xs={12} justify="center">
-                <Typography variant="overline" className={classes.contrib}>Contributors:</Typography>
+                <Typography variant="overline" className={classes.contrib}>Credits:</Typography>
             </Grid>
             <Grid container item xs={12} justify="center">
-                <Grid container item xs={6} md={2} justify="center">
-                <a href="https://github.com/victafrancis" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
-                    <Typography variant="subtitle1">Francis Victa</Typography>
-                    <Typography variant="subtitle2"><small>Project Lead</small></Typography>
-                </a>
-                </Grid>
-                <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/lilianyangc" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
-                        <Typography variant="subtitle1">Lilian Yang</Typography>
-                        <Typography variant="subtitle2"><small>Developer</small></Typography>
-                    </a>
-                </Grid>
                 <Grid container item xs={6} md={2} justify="center">
                     <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Klifford Agujar</Typography>
@@ -246,9 +217,9 @@ function Project1() {
                     </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/NaguitSirAngel" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
-                        <Typography variant="subtitle1">Sir Angel Naguit</Typography>
-                        <Typography variant="subtitle2"><small>Part Time</small></Typography>
+                    <a href="https://github.com/cocodataset/cocoapi" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
+                        <Typography variant="subtitle1">COCO</Typography>
+                        <Typography variant="subtitle2"><small>Neural Network</small></Typography>
                     </a>
                 </Grid>
             </Grid>
