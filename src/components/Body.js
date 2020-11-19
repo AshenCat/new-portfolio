@@ -43,7 +43,7 @@ const useStyle = makeStyles( theme => ({
     bio: {
         height:"100vh",
         backgroundImage: `url(${prgimage})`,
-        backgroundAttachment: 'fixed',
+        // backgroundAttachment: 'fixed',
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -129,10 +129,10 @@ function Body() {
                 <Container style={{"marginTop": "1rem"}}>
                     <Grid container justify="center" spacing={3}>
                         <Grid item>
-                            <a href="https://github.com/ashencat" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
+                            <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
-                            <a href="https://www.linkedin.com/in/klifford-agujar-8714a41a9/" className={classes.visited}><LinkedIn style={{ fontSize: 60 }}/></a>
+                            <a href="https://www.linkedin.com/in/klifford-agujar-8714a41a9/" target="_blank" rel="noopener noreferrer" className={classes.visited}><LinkedIn style={{ fontSize: 60 }}/></a>
                         </Grid>
                         <Grid item>
                             <Link   
