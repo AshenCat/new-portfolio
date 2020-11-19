@@ -197,7 +197,7 @@ function Project1() {
                 <Grid item className={classes.mdgap}>
                     <Container>
                         <Typography variant="subtitle1">
-                            FREELANCE - A simple project to help a restaurant owner reduce employee-customer contact within business grounds by upgrading from an old physical menu, to an online menu where customers just have to scan a QR code to access the menu.
+                            FREELANCE - A simple project to help a restaurant owner reduce employee-customer contact within business grounds. The goal is to make a menu that is user-centric for good custormer experience.
                         </Typography>
                     </Container>
                 </Grid>
@@ -206,13 +206,13 @@ function Project1() {
                         <Typography variant="overline">Links:</Typography>
                     </Grid>
                     <Grid item container xs={4}>
-                        <a href="https://github.com/AshenCat/rm_client" className={classes.outlineButton}>
+                        <a href="https://github.com/AshenCat/rm_client" target="_blank" rel="noopener noreferrer" className={classes.outlineButton}>
                             <div style={{textAlign: "center"}}><GitHub /></div>
                             <Typography>Github</Typography>
                         </a>
                     </Grid>
                     <Grid item container xs={4}>
-                        <a href="https://www.futuredining.ca" className={classes.outlineButton}>
+                        <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className={classes.outlineButton}>
                             <div style={{textAlign: "center"}}><ComputerOutlined /></div>
                             <Typography>Demo</Typography>
                         </a>
@@ -228,25 +228,25 @@ function Project1() {
             </Grid>
             <Grid container item xs={12} justify="center">
                 <Grid container item xs={6} md={2} justify="center">
-                <a href="https://github.com/victafrancis" className={classes.anchor} style={{textAlign: "center"}}>
+                <a href="https://github.com/victafrancis" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                     <Typography variant="subtitle1">Francis Victa</Typography>
                     <Typography variant="subtitle2"><small>Project Lead</small></Typography>
                 </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/lilianyangc" className={classes.anchor} style={{textAlign: "center"}}>
+                    <a href="https://github.com/lilianyangc" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Lilian Yang</Typography>
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
                     </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/ashencat" className={classes.anchor} style={{textAlign: "center"}}>
+                    <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Klifford Agujar</Typography>
                         <Typography variant="subtitle2"><small>Developer</small></Typography>
                     </a>
                 </Grid>
                 <Grid container item xs={6} md={2} justify="center">
-                    <a href="https://github.com/NaguitSirAngel" className={classes.anchor} style={{textAlign: "center"}}>
+                    <a href="https://github.com/NaguitSirAngel" target="_blank" rel="noopener noreferrer" className={classes.anchor} style={{textAlign: "center"}}>
                         <Typography variant="subtitle1">Sir Angel Naguit</Typography>
                         <Typography variant="subtitle2"><small>Part Time</small></Typography>
                     </a>
