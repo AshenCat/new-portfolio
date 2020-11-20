@@ -4,7 +4,7 @@ import React from 'react'
 import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
 import { Link } from "react-scroll";
 import Wipes from './Wipes';
-import prgimage from '../assets/projects.jpg'
+import prgimage from '../assets/projects1.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBootstrap, faCss3, faHtml5, faJsSquare, faMdb, faNodeJs, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
