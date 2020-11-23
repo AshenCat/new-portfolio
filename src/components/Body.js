@@ -138,7 +138,7 @@ function Body() {
                 </nav>
                 <Grid container direction="column" justify="center" alignItems="center" className={classes.container}>
                     <Grid item className={classes.headNameContainer}>
-                        <Typography align="center" variant="h2" className={classes.name}>Klifford Agujar</Typography>
+                        <Typography align="center" variant="h1" className={classes.name}>Klifford Agujar</Typography>
                     </Grid>
                     <Grid item>
                         <Typography align="center" variant="h4" className={classes.title}>
