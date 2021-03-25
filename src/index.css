@@ -32,10 +32,12 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: #CEDCFF;
+  background: #ECF3F8;
+  min-height: 100vh;
 }
 
 .projectContainer{
+  height: auto !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,8 +48,10 @@ body {
 
 .projectItemCard {
   position: relative;
-  min-width: 80%;
-  min-height: 440px;
+  width: 80%;
+  max-width: 900px !important;
+  min-height: 400px;
+  height: auto !important;
   box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
               inset -5px -5px 15px rgba(11, 55, 117, 0.1),
               5px 5px 15px rgba(0,0,0,0.3),
@@ -59,12 +63,13 @@ body {
 
 .projectItemBox {
   position: absolute;
+  height: auto !important;
   top: 20px;
   left: 20px;
   right: 20px;
   bottom: 20px;
-  background: #CCDEFF;
-  border: 2px solid #C1D4FF;
+  background: #F3F6FF;
+  border: 2px solid #E7EEFF;
   border-radius: 15px;
   box-shadow: 0 20px 50px rgba(0,0,0,0.5);
   transition: 0.5s;
@@ -87,4 +92,53 @@ body {
 
 .projectItem {
   padding: 20px;
+  height: auto !important;
+}
+.panel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.hideOF {
+  overflow: hidden;
+}
+
+
+hr.rule {
+  overflow: visible; /* For IE */
+  padding: 0;
+  border: none;
+  border-top: medium double #333;
+  color: #333;
+  text-align: center;
+}
+
+hr.rule:after {
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.6em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+  background: #F3F6FF;
+}
+
+.prjLink {
+  text-decoration: none;
+  text-transform: uppercase;
+  background: #aaa;
+  padding: 10px 30px;
+  border-radius: 10px;
+}
+
+.prjLink:visited {
+  color: black;
+}
+
+.prjLink:hover {
+  cursor: pointer;
 }

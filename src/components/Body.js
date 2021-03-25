@@ -1,16 +1,15 @@
-import { Container, Grid, Typography } from '@material-ui/core'
+import { Container, Grid, Hidden, Typography } from '@material-ui/core'
 import React from 'react'
-// import imghr from '../assets/imghr0.jpg'
-import { GitHub, LinkedIn, AlternateEmail } from '@material-ui/icons';
+import { GitHub, LinkedIn, AlternateEmail, Computer } from '@material-ui/icons';
 import { Link } from "react-scroll";
-// import Wipes from './Wipes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBootstrap, faCss3, faHtml5, faJsSquare, faMdb, faNodeJs, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import {useStyle} from './useStyles'
-// import { library } from '@fortawesome/fontawesome-svg-core';
-
-// library.add(faGoogle)
+import {overrideTheme, useStyle} from './useStyles';
+import { LocationOn } from '@material-ui/icons';
+import { ThemeProvider } from '@material-ui/core/styles'
+import ims from '../assets/ReactIMS0.jpg';
+import resto2 from '../assets/resto.png';
 
 function Body() {
     const classes = useStyle()
@@ -57,28 +56,153 @@ function Body() {
                     </Grid>
                 </Container>
             </section>
+            <section>
+            <div className="panel">
+                <Grid container className={classes.intro}>
+                    <Grid item>
+                        {/* <ThemeProvider theme={overrideTheme}>
+                            <Paper>
+                                <Typography variant="h3" className={classes.introTxt}>
+                                    Projects
+                                </Typography>
+                            </Paper>
+                        </ThemeProvider> */}
+                        
+                        <Grid container direction="column" className={classes.meNameContainer}>
+                            <Typography variant="h2" className={classes.meName}>
+                                Hi, I'm Klifford.
+                            </Typography>
+                            <Grid container item alignItems="center" className={classes.loc}>
+                                <LocationOn style={{fontSize: "inherit"}} />
+                                <Typography style={{fontSize: "inherit"}}>Toronto, Ontario</Typography>
+                            </Grid>
+                        </Grid>
+                        <Typography variant="h4" className={classes.meInfo}>
+                            I am a passionate web developer with a curious mindset. The internet has always piqued my interest which led me to pursue a career in web development. On my free time, I do my personal projects which involves coding and some electronics. Here's some of my projects from freelancing and school.
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </div>
+            </section>
+            <section className={classes.divider}>
+                <Typography variant="h4" className={classes.textCenter}>
+                    Projects
+                </Typography>
+            </section>
             <section className="projectList">
-                <div className="projectContainer">
-                    {/* <Wipes /> */}
-                    {/* <div className="projectList"> */}
-                        <div className="projectItemCard">
+                <ThemeProvider theme={overrideTheme}>
+                    <div className="projectContainer">
+                        {/* <Wipes /> */}
+                        {/* <div className="projectList"> */}
+                        
+                        {/* Project 1 */}
+                        <div className="projectItemCard" style={{minHeight: "460px"}}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
                                     <h1>01</h1>
-                                    <div className="content">
-                                    <Typography variant="h3" component="h2" gutterBottom>
-                                            Restaurant Menu App
-                                        </Typography>
+                                    <Typography variant="h4" component="h2" className={classes.prjTitle}>
+                                        Inventory Management
+                                    </Typography>
+                                    <hr className="rule" />
+                                        <div style={{overflowX: 'hidden', overflowY: 'auto', height: '260px'}}>
+                                            <Typography>
+                                                <Hidden xsDown>
+                                                    <img src={ims} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                                </Hidden>
+                                                Capstone - This college project is a collaborative work of three students as a team. 
+                                                Starting from scratch, we have designed this project by brainstorming ideas of how and IMS system would be. 
+                                                Tasks were assigned to each member to have a goal for every sprint. 
+                                            </Typography>
+                                            <Grid item container xs={4}>
+                                                <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><GitHub /></div>
+                                                    <Typography>Github</Typography>
+                                                </a>
+                                            </Grid>
+                                        <div style={{clear: 'both'}}></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    {/* </div> */}
-                </div>
+                        {/* </div> */}
+                        {/* Project 2 */}
+                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                            <div className="projectItemBox">
+                                <div className="projectItem">
+                                    <h1>02</h1>
+                                    <Typography variant="h4" component="h2" className={classes.prjTitle}>
+                                        Restaurant Menu App
+                                    </Typography>
+                                    <hr className="rule" />
+                                    <div style={{overflowX: 'hidden', overflowY: 'auto', height: '255px'}}>
+                                        <Typography>
+                                            <Hidden xsDown>
+                                                <img src={resto2} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                            </Hidden>
+                                            Freelance - Created a simple frontend application that serves as a restaurant menu. 
+                                            I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.
+                                        </Typography>
+                                        <Grid container spacing={2} justify="space-evenly">
+                                            <Grid item container xs={12} sm={3}>
+                                                <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><Computer /></div>
+                                                    <Typography>Demo</Typography>
+                                                </a>
+                                            </Grid>
+                                            <Grid item container xs={12} sm={3}>
+                                                <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><GitHub /></div>
+                                                    <Typography>Github</Typography>
+                                                </a>
+                                            </Grid>
+                                        </Grid>
+                                        <div style={{clear: 'both'}}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Project 3 */}
+                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                            <div className="projectItemBox">
+                                <div className="projectItem">
+                                    <h1>02</h1>
+                                    <Typography variant="h4" component="h2" className={classes.prjTitle}>
+                                        Restaurant Menu App
+                                    </Typography>
+                                    <hr className="rule" />
+                                    <div style={{overflowX: 'hidden', overflowY: 'auto', height: '255px'}}>
+                                        <Typography>
+                                            <Hidden xsDown>
+                                                <img src={resto2} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                            </Hidden>
+                                            Freelance - Created a simple frontend application that serves as a restaurant menu. 
+                                            I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.
+                                        </Typography>
+                                        <Grid container spacing={2} justify="space-evenly">
+                                            <Grid item container xs={12} sm={3}>
+                                                <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><Computer /></div>
+                                                    <Typography>Demo</Typography>
+                                                </a>
+                                            </Grid>
+                                            <Grid item container xs={12} sm={3}>
+                                                <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><GitHub /></div>
+                                                    <Typography>Github</Typography>
+                                                </a>
+                                            </Grid>
+                                        </Grid>
+                                        <div style={{clear: 'both'}}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ThemeProvider>
             </section>
             <section className={classes.divider}>
                 <Typography variant="h4" className={classes.textCenter}>
-                    Techs
+                    Skills
                 </Typography>
             </section>
             <section className={classes.tech}>
