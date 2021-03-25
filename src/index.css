@@ -19,3 +19,72 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+/* #firstDivider {
+  -moz-box-shadow:    inset 0 0 10px #000000;
+  -webkit-box-shadow: inset 0 0 10px #000000;
+  box-shadow:         inset 0 0 10px #000000;
+} */
+
+.projectList {
+  /* width: 100vw; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #CEDCFF;
+}
+
+.projectContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.projectItemCard {
+  position: relative;
+  min-width: 80%;
+  min-height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+              inset -5px -5px 15px rgba(11, 55, 117, 0.1),
+              5px 5px 15px rgba(0,0,0,0.3),
+              -5px -5px 15px rgba(25, 66, 124, 0.1);
+  border-radius: 15px;
+  /* background: #848686; */
+  margin: 30px;
+}
+
+.projectItemBox {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #CCDEFF;
+  border: 2px solid #C1D4FF;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  transition: 0.5s;
+}
+
+.projectItemBox:hover{
+  transform: translateY(-50px);
+  box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+}
+
+.projectItem h1 {
+  font-family: Arial, sans-serif;
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(0,0,0,0.05);
+  margin: 10px 0;
+}
+
+.projectItem {
+  padding: 20px;
+}
