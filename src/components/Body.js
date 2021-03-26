@@ -3,13 +3,15 @@ import React from 'react'
 import { GitHub, LinkedIn, AlternateEmail, Computer } from '@material-ui/icons';
 import { Link } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBootstrap, faCss3, faHtml5, faJsSquare, faMdb, faNodeJs, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faBootstrap, faCss3, faHtml5, faJsSquare, faMdb, faNodeJs, faReact, faVuejs } from '@fortawesome/free-brands-svg-icons';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import {overrideTheme, useStyle} from './useStyles';
 import { LocationOn } from '@material-ui/icons';
 import { ThemeProvider } from '@material-ui/core/styles'
 import ims from '../assets/ReactIMS0.jpg';
+import ML from '../assets/ML.png';
 import resto2 from '../assets/resto.png';
+import TPCFigma from '../assets/TPCFigma.png';
 
 function Body() {
     const classes = useStyle()
@@ -104,7 +106,7 @@ function Body() {
                                         Inventory Management
                                     </Typography>
                                     <hr className="rule" />
-                                        <div style={{overflowX: 'hidden', overflowY: 'auto', height: '260px'}}>
+                                        <div>
                                             <Typography>
                                                 <Hidden xsDown>
                                                     <img src={ims} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
@@ -113,12 +115,12 @@ function Body() {
                                                 Starting from scratch, we have designed this project by brainstorming ideas of how and IMS system would be. 
                                                 Tasks were assigned to each member to have a goal for every sprint. 
                                             </Typography>
-                                            <Grid item container xs={4}>
-                                                <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
-                                                    <div style={{textAlign: "center"}}><GitHub /></div>
-                                                    <Typography>Github</Typography>
-                                                </a>
-                                            </Grid>
+                                                <Grid item container xs={12}>
+                                                    <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                        <div style={{textAlign: "center"}}><GitHub /></div>
+                                                        <Typography>Github</Typography>
+                                                    </a>
+                                                </Grid>
                                         <div style={{clear: 'both'}}></div>
                                     </div>
                                 </div>
@@ -134,23 +136,23 @@ function Body() {
                                         Restaurant Menu App
                                     </Typography>
                                     <hr className="rule" />
-                                    <div style={{overflowX: 'hidden', overflowY: 'auto', height: '255px'}}>
+                                    <div>
                                         <Typography>
                                             <Hidden xsDown>
-                                                <img src={resto2} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                                <img src={resto2} alt="Restaurant App" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
                                             </Hidden>
                                             Freelance - Created a simple frontend application that serves as a restaurant menu. 
                                             I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.
                                         </Typography>
-                                        <Grid container spacing={2} justify="space-evenly">
-                                            <Grid item container xs={12} sm={3}>
+                                        <Grid container justify="space-evenly" style={{marginTop: '5px'}}>
+                                            <Grid item container xs={4}>
                                                 <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
                                                     <div style={{textAlign: "center"}}><Computer /></div>
                                                     <Typography>Demo</Typography>
                                                 </a>
                                             </Grid>
-                                            <Grid item container xs={12} sm={3}>
-                                                <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                            <Grid item container xs={4} direction="row">
+                                                <a href="https://github.com/AshenCat/rm_client" target="_blank" rel="noopener noreferrer" className="prjLink">
                                                     <div style={{textAlign: "center"}}><GitHub /></div>
                                                     <Typography>Github</Typography>
                                                 </a>
@@ -165,33 +167,43 @@ function Body() {
                         <div className="projectItemCard" style={{minHeight: "450px"}}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
-                                    <h1>02</h1>
+                                    <h1>03</h1>
                                     <Typography variant="h4" component="h2" className={classes.prjTitle}>
-                                        Restaurant Menu App
+                                        <Hidden xsDown>Python </Hidden> Object Detection
                                     </Typography>
                                     <hr className="rule" />
-                                    <div style={{overflowX: 'hidden', overflowY: 'auto', height: '255px'}}>
+                                    <div>
                                         <Typography>
                                             <Hidden xsDown>
-                                                <img src={resto2} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                                <img src={ML} alt="ML" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
                                             </Hidden>
-                                            Freelance - Created a simple frontend application that serves as a restaurant menu. 
-                                            I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.
+                                            COLLEGE - Whilst python isn't my most comfortable language, I've had a good time doing this project. 
+                                            Using the <a href="https://cocodataset.org/" style={{color: 'black'}} target="_blank" rel="noopener noreferrer" >Common Objects in Context (COCO)</a> dataset, 
+                                            I was able to detect objects in my screen in real time. Instead of inputting single image feeds, I modified it to take video feed instead and label all the objects it detects.
+
                                         </Typography>
-                                        <Grid container spacing={2} justify="space-evenly">
-                                            <Grid item container xs={12} sm={3}>
-                                                <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
-                                                    <div style={{textAlign: "center"}}><Computer /></div>
-                                                    <Typography>Demo</Typography>
-                                                </a>
-                                            </Grid>
-                                            <Grid item container xs={12} sm={3}>
-                                                <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
-                                                    <div style={{textAlign: "center"}}><GitHub /></div>
-                                                    <Typography>Github</Typography>
-                                                </a>
-                                            </Grid>
-                                        </Grid>
+                                        <div style={{clear: 'both'}}></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/* Project 4 */}
+                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                            <div className="projectItemBox">
+                                <div className="projectItem">
+                                    <h1>04</h1>
+                                    <Typography variant="h4" component="h2" className={classes.prjTitle}>
+                                        Tender Plant and Care
+                                    </Typography>
+                                    <hr className="rule" />
+                                    <div>
+                                        <Typography>
+                                            <Hidden xsDown>
+                                                <img src={TPCFigma} alt="TPCFigma" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
+                                            </Hidden>
+                                            FREELANCE - A collaborative work to create an app to manage a flowerpot shop. I have worked starting from designing up to the finished product.
+                                            I worked on several views making sure that it matches the Figma specifications. I also worked on the DB queries ensuring that the response is lightweight and only pulling necessary data.
+                                        </Typography>
                                         <div style={{clear: 'both'}}></div>
                                     </div>
                                 </div>
@@ -205,49 +217,75 @@ function Body() {
                     Skills
                 </Typography>
             </section>
-            <section className={classes.tech}>
-                <Grid container justify="center" alignContent="center" className={classes.techCardHolder}>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faReact} size="6x" />
-                        <Typography>React</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faVuejs} size="6x" />
-                        <Typography>Vue</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faNodeJs} size="6x" />
-                        <Typography>Nodejs</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faHtml5} size="6x" />
-                        <Typography>HTML5</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faCss3} size="6x" />
-                        <Typography>CSS3</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faJsSquare} size="6x" />
-                        <Typography>Javascript</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faDatabase} size="6x" />
-                        <Typography>MongoDB</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faDatabase} size="6x" />
-                        <Typography>MySQL</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faBootstrap} size="6x" />
-                        <Typography>Bootstrap</Typography>
-                    </Grid>
-                    <Grid item container xs={12} sm={4} md={3} direction="column" alignContent="center" alignItems="center" justify="center" className={classes.card}>
-                        <FontAwesomeIcon icon={faMdb} size="6x" />
-                        <Typography>Material Design</Typography>
-                    </Grid>
-                </Grid>
+            <section className={classes.tech} style={{paddingTop: '60px', paddingBottom: '60px', width: '100%'}}>
+                <ul>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faReact} className="slide"/>
+                            <Typography>React</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faVuejs} className="slide"/>
+                            <Typography>Vue</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faNodeJs} className="slide"/>
+                            <Typography>Nodejs</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faHtml5} className="slide"/>
+                            <Typography>HTML5</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faCss3} className="slide"/>
+                            <Typography>CSS3</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faJsSquare} className="slide"/>
+                            <Typography>Javascript</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faDatabase} className="slide"/>
+                            <Typography>MySQL</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faDatabase} className="slide"/>
+                            <Typography>MongoDB</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faBootstrap} className="slide"/>
+                            <Typography>Bootstrap</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faMdb} className="slide"/>
+                            <Typography>Material Design</Typography>
+                        </span>
+                    </li>
+                    <li>
+                        <span>
+                            <FontAwesomeIcon icon={faAngular} className="slide"/>
+                            <Typography>Angular</Typography>
+                        </span>
+                    </li>
+                </ul>
             </section>
         </>
     )
