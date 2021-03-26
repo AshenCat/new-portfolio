@@ -70,7 +70,7 @@ function Footer() {
                 <Typography variant="h4" className={classes.head}>Contact </Typography>
                 <form onSubmit={onclick} id="form">
                 <Grid container direction="row" justify="space-evenly">
-                    <Grid container item direction="column" xs={12} md={6}>
+                    <Grid container item direction="column" xs={12} md={7}>
                         <Grid item xs={12}>
                             <TextField value="you" type="hidden"/>
                         </Grid>
@@ -94,7 +94,7 @@ function Footer() {
                             <Button color="primary" type="submit" variant="contained" style={{marginTop:"1rem"}}>Send Message</Button>
                         </Grid>
                     </Grid>
-                    <Grid container item xs={12} md={4} direction="column" justify="space-between">
+                    <Grid container item xs={12} md={3} direction="column" justify="space-between">
                         <Hidden smUp>
                             <div style={{marginTop: "5vh"}} />
                         </Hidden>
