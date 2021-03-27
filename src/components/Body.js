@@ -13,8 +13,61 @@ import ML from '../assets/ML.png';
 import resto2 from '../assets/resto.png';
 import TPCFigma from '../assets/TPCFigma.png';
 
-function Body() {
-    const classes = useStyle()
+function Body(props) {
+    const {size} = props;
+    console.log(size)
+    const classes = useStyle();
+
+    const cardHeight1 = {
+        minHeight: 
+        size.x < 300 ? '580px' : 
+        size.x < 360 ? '550px' : 
+        size.x < 421 ? '480px' : 
+        size.x < 480 ? '530px' :
+        size.x < 545 ? '630px' : 
+        size.x < 600 ? '570px' : 
+        size.x < 700 ? '520px' : 
+        size.x < 800 ? '480px' : '440px'};
+
+    const cardHeight2 = {
+        minHeight: 
+        size.x < 321 ? '540px' :
+        size.x < 360 ? '510px' :  
+        size.x < 421 ? '460px' : 
+        size.x < 480 ? '510px' :
+        size.x < 545 ? '610px' : 
+        size.x < 600 ? '550px' : 
+        size.x < 700 ? '500px' : 
+        size.x < 800 ? '460px' : '430px'};
+        
+    const cardHeight3 = {
+        minHeight: 
+        size.x < 321 ? '500px' :
+        size.x < 360 ? '480px' :  
+        size.x < 421 ? '450px' : 
+        size.x < 480 ? '510px' :
+        size.x < 545 ? '570px' : 
+        size.x < 600 ? '550px' : 
+        size.x < 700 ? '470px' : 
+        size.x < 800 ? '420px' : '390px'};
+
+    const cardHeight4 = {
+        minHeight: 
+        size.x < 321 ? '510px' :
+        size.x < 360 ? '480px' :  
+        size.x < 421 ? '455px' : 
+        size.x < 480 ? '535px' :
+        size.x < 545 ? '570px' : 
+        size.x < 600 ? '510px' : 
+        size.x < 700 ? '470px' : 
+        size.x < 800 ? '420px' : '390px'};
+
+    const imageStyle = {
+        width: size.x < 480 ? "150px" :"300px", 
+        float: 'left', 
+        marginRight: '10px', 
+        borderRadius: '5px'};
+
     return (
         <>
             <section className={classes.bio} id="s2t">
@@ -23,7 +76,9 @@ function Body() {
                 </nav>
                 <Grid container direction="column" justify="center" alignItems="center" className={classes.container}>
                     <Grid item className={classes.headNameContainer}>
-                        <Typography align="center" variant="h1" className={classes.name}>Klifford Agujar</Typography>
+                        <ThemeProvider theme={overrideTheme}>
+                            <Typography align="center" variant="h1" className={classes.name}>Klifford Agujar</Typography>
+                        </ThemeProvider>
                     </Grid>
                     <Grid item>
                         <Typography align="center" variant="h4" className={classes.title}>
@@ -36,7 +91,7 @@ function Body() {
                 <Typography variant="h4" className={classes.textCenter}>
                     Public Links
                 </Typography>
-                <Container style={{"marginTop": "1rem"}}>
+                <Container style={{marginTop: "1rem"}}>
                     <Grid container justify="center" spacing={3}>
                         <Grid item>
                             <a href="https://github.com/ashencat" target="_blank" rel="noopener noreferrer" className={classes.visited}><GitHub style={{ fontSize: 60 }}/></a>
@@ -98,7 +153,7 @@ function Body() {
                         {/* <div className="projectList"> */}
                         
                         {/* Project 1 */}
-                        <div className="projectItemCard" style={{minHeight: "460px"}}>
+                        <div className="projectItemCard" style={cardHeight1}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
                                     <h1>01</h1>
@@ -108,19 +163,17 @@ function Body() {
                                     <hr className="rule" />
                                         <div>
                                             <Typography>
-                                                <Hidden xsDown>
-                                                    <img src={ims} alt="IMS" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
-                                                </Hidden>
+                                                    <img src={ims} alt="IMS" style={imageStyle} />
                                                 Capstone - This college project is a collaborative work of three students as a team. 
                                                 Starting from scratch, we have designed this project by brainstorming ideas of how and IMS system would be. 
                                                 Tasks were assigned to each member to have a goal for every sprint. 
                                             </Typography>
-                                                <Grid item container xs={12}>
-                                                    <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
-                                                        <div style={{textAlign: "center"}}><GitHub /></div>
-                                                        <Typography>Github</Typography>
-                                                    </a>
-                                                </Grid>
+                                            <Grid item container xs={12} style={{position: 'absolute', bottom: '15px', right: 0, left: 0}}>
+                                                <a href="https://github.com/AshenCat/capstone-abc-store" target="_blank" rel="noopener noreferrer" className="prjLink">
+                                                    <div style={{textAlign: "center"}}><GitHub /></div>
+                                                    <Typography>Github</Typography>
+                                                </a>
+                                            </Grid>
                                         <div style={{clear: 'both'}}></div>
                                     </div>
                                 </div>
@@ -128,7 +181,7 @@ function Body() {
                         </div>
                         {/* </div> */}
                         {/* Project 2 */}
-                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                        <div className="projectItemCard" style={cardHeight2}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
                                     <h1>02</h1>
@@ -138,13 +191,11 @@ function Body() {
                                     <hr className="rule" />
                                     <div>
                                         <Typography>
-                                            <Hidden xsDown>
-                                                <img src={resto2} alt="Restaurant App" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
-                                            </Hidden>
+                                                <img src={resto2} alt="Restaurant App" style={imageStyle} />
                                             Freelance - Created a simple frontend application that serves as a restaurant menu. 
                                             I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.
                                         </Typography>
-                                        <Grid container justify="space-evenly" style={{marginTop: '5px'}}>
+                                        <Grid container justify="space-evenly" style={{position: 'absolute', bottom: '15px', right: 0, left: 0}}>
                                             <Grid item container xs={4}>
                                                 <a href="https://www.futuredining.ca" target="_blank" rel="noopener noreferrer" className="prjLink">
                                                     <div style={{textAlign: "center"}}><Computer /></div>
@@ -164,19 +215,18 @@ function Body() {
                             </div>
                         </div>
                         {/* Project 3 */}
-                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                        <div className="projectItemCard" style={cardHeight3}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
                                     <h1>03</h1>
                                     <Typography variant="h4" component="h2" className={classes.prjTitle}>
-                                        <Hidden xsDown>Python </Hidden> Object Detection
+                                        Python Object Detection
                                     </Typography>
                                     <hr className="rule" />
                                     <div>
                                         <Typography>
-                                            <Hidden xsDown>
-                                                <img src={ML} alt="ML" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
-                                            </Hidden>
+                                            <img src={ML} alt="ML" style={imageStyle} />
+                                            
                                             COLLEGE - Whilst python isn't my most comfortable language, I've had a good time doing this project. 
                                             Using the <a href="https://cocodataset.org/" style={{color: 'black'}} target="_blank" rel="noopener noreferrer" >Common Objects in Context (COCO)</a> dataset, 
                                             I was able to detect objects in my screen in real time. Instead of inputting single image feeds, I modified it to take video feed instead and label all the objects it detects.
@@ -188,7 +238,7 @@ function Body() {
                             </div>
                         </div>
                         {/* Project 4 */}
-                        <div className="projectItemCard" style={{minHeight: "450px"}}>
+                        <div className="projectItemCard" style={cardHeight4}>
                             <div className="projectItemBox">
                                 <div className="projectItem">
                                     <h1>04</h1>
@@ -198,9 +248,7 @@ function Body() {
                                     <hr className="rule" />
                                     <div>
                                         <Typography>
-                                            <Hidden xsDown>
-                                                <img src={TPCFigma} alt="TPCFigma" style={{width: "300px", float: 'left', marginRight: '10px', borderRadius: '5px'}} />
-                                            </Hidden>
+                                            <img src={TPCFigma} alt="TPCFigma" style={imageStyle} />
                                             FREELANCE - A collaborative work to create an app to manage a flowerpot shop. I have worked starting from designing up to the finished product.
                                             I worked on several views making sure that it matches the Figma specifications. I also worked on the DB queries ensuring that the response is lightweight and only pulling necessary data.
                                         </Typography>
