@@ -17,7 +17,7 @@ function Body() {
     const classes = useStyle()
     return (
         <>
-            <section className={classes.bio}>
+            <section className={classes.bio} id="s2t">
                 <nav className={classes.nav}>
                     <Typography variant="h4" className={classes.navItem}>@KA</Typography>   
                 </nav>

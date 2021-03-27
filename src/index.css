@@ -98,6 +98,7 @@ body {
   padding: 20px;
   height: auto !important;
 }
+
 .panel {
   position: relative;
   display: flex;
@@ -153,6 +154,14 @@ hr.rule:after {
   font-size: 6em;
 }
 
+.floatBtn {
+  position: fixed;
+  right: 5px;
+  top: 10px;
+  z-index: 5;
+  color: blue;
+}
+
 ul {
   position: relative;
   display: flex;
@@ -160,16 +169,18 @@ ul {
   justify-content: space-evenly;
   align-items: center;
   padding-left: 0;
+  padding: 0 15%;
 }
 
 ul li {
   position: relative;
   list-style: none;
   cursor: pointer;
-  margin: 10px 40px;
-  padding-left: 15px;
+  margin: 15px 40px;
+  padding: 5px 15px;
   padding-top: 4px;
   margin-bottom: 10px;
+  border: 1px solid #E7EEFF;
 }
 
 ul li::before {
@@ -180,6 +191,12 @@ ul li::before {
   height: 0;
   overflow: hidden;
   transition: 0.5s ease-in-out;
+}
+
+span h2 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
 }
 
 ul li:hover {
