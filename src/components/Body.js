@@ -3,7 +3,6 @@ import React from 'react'
 import { GitHub, AlternateEmail, LinkedIn } from '@material-ui/icons';
 import {overrideTheme, useStyle} from './useStyles';
 import { ThemeProvider } from '@material-ui/core/styles'
-import { useModal } from './context/ModalContext';
 import Skills from './sections/Skills';
 import Hero from './sections/Hero';
 import Intro from './sections/Intro';
