@@ -7,6 +7,7 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import { ArrowDownward, ArrowUpward } from '@material-ui/icons';
 import { Link } from "react-scroll";
+import { ModalProvider } from './components/context/ModalContext';
 
 const theme = createMuiTheme({
   ...this,
@@ -18,7 +19,6 @@ const theme = createMuiTheme({
 })
 
 function App() {
-
   const [size, setSize] = useState({
     x: window.innerWidth,
     y: window.innerHeight
@@ -43,9 +43,11 @@ function App() {
         <ArrowUpward style={{fontSize: '3em', display: 'block', margin: '0 auto'}}/>
         <Typography variant="h5" align="center" style={{ margin: '0 auto'}}>Top</Typography>
       </Link>
-      <BrowserRouter>
-        <Route exact path="/" component={()=><Body size={size} />} />
-      </BrowserRouter>
+      <ModalProvider>
+        <BrowserRouter>
+          <Route exact path="/" component={()=><Body size={size} />} />
+        </BrowserRouter>
+      </ModalProvider>
       <Link   
         to="form" 
         spy={true} 
