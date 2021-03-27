@@ -10,7 +10,7 @@ export const useModal = () => {
 
 export const ModalProvider = (props) => {
     const [open, setOpen] = React.useState(false);
-    const [images, setImages] = React.useState(null);
+    const [images, setImages] = React.useState([]);
     const [title, setTitle] = React.useState("");
     
     // const nextImage = () => {

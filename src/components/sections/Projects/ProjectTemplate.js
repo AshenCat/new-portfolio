@@ -1,15 +1,18 @@
 import { Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import { GitHub, Computer } from '@material-ui/icons';
+import { useModal } from '../../context/ModalContext';
 
 function ProjectTemplate(props) {
     const { cardHeight, imageStyle, classes } = props;
     const { title, id, img, description, links} = props;
 
+    const {setOpen, setImages, setTitle} = useModal();
+
     const ImageHandler = () => {
         return img.length !== 0 ?
             // eslint-disable-next-line jsx-a11y/alt-text
-            <img src={img[0].src} alt={img[0]?.alt} style={imageStyle} /> : null
+            <img src={img[0].src} alt={img[0]?.alt} style={imageStyle} onClick={onImageClick}/> : null
     }
 
     const LinksHandler = () => {
@@ -26,6 +29,13 @@ function ProjectTemplate(props) {
                     </Typography>
                 </a>
             </Grid>)
+    }
+    // console.log(img)
+
+    const onImageClick = () => {
+        setTitle(title)
+        setImages(img)
+        setOpen(true)
     }
 
     return (
