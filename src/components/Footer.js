@@ -108,8 +108,8 @@ function Footer() {
                                 Media credits:<br />
                             </Typography>
                                 <Typography><a href="https://pexels.com" target="_blank" rel="noopener noreferrer" className={classes.anchor}>Pexels</a><br /></Typography>
-                                <Typography><a href="https://www.svgbackgrounds.com/" target="_blank" rel="noopener noreferrer" className={classes.anchor}>SVGBackgrounds</a><br />
-                            </Typography>
+                                <Typography><a href="https://www.svgbackgrounds.com/" target="_blank" rel="noopener noreferrer" className={classes.anchor}>SVGBackgrounds</a><br /></Typography>
+                                <Typography><a href="https://bgjar.com/" target="_blank" rel="noopener noreferrer" className={classes.anchor}>BGJar</a><br /></Typography>
                         </Grid>
                         <Typography variant="overline">	&#169; All rights reserved</Typography>
                     </Grid>

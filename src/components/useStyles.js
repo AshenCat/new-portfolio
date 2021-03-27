@@ -145,13 +145,18 @@ export const overrideTheme = createMuiTheme({
     overrides: {
         MuiTypography: {
             root: {
-                '@media (max-width:321px)': {
+                '@media (max-width:421px)': {
                     fontSize: '.8rem !important',
                 },
             },
             h4: {
-                '@media (max-width:321px)': {
-                    fontSize: '1.8rem !important',
+                '@media (max-width:421px)': {
+                    fontSize: '1.5rem !important',
+                }
+            },
+            h1: {
+                '@media (max-width:421px)': {
+                    fontSize: '5rem !important',
                 }
             }
         }
