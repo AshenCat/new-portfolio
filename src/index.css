@@ -184,7 +184,13 @@ hr.rule:after {
 button.fakeButton { 
   border:none; 
   border-radius: 10px;
+  transition: .3s ease;
 } 
+
+button.fakeButton:hover {
+  background: #888888aa;
+  color: white;
+}
 
 .cardMiddleLeft {
   position: absolute;
@@ -197,6 +203,20 @@ button.fakeButton {
   top: 50%;
   right: 10px;
 }
+
+.cardMiddleBottom {
+  position: absolute;
+  bottom: 60px;
+}
+
+.pageIndicator {
+  /* padding: 0; */
+}
+
+.zoomSize {
+  font-size: 1rem;
+}
+
 
 .modalImageContainer {
   overflow: hidden;

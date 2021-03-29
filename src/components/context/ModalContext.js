@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import {Dialog, DialogActions, DialogContent, DialogTitle} from '@material-ui/core'
-import { ArrowLeftRounded, ArrowRightOutlined } from '@material-ui/icons';
+import { ArrowLeftRounded, ArrowRightOutlined, ZoomIn, ZoomOut } from '@material-ui/icons';
 
 
 const ModalContext = React.createContext();
@@ -16,12 +16,15 @@ export const ModalProvider = (props) => {
     const [page, setPage] = React.useState(0);
     const [pressed, setPressed] = React.useState(false);
     const [position, setPosition] = React.useState({x:0, y:0});
+    const [zoom, setZoom] = React.useState(false)
     const imgRef = React.useRef();
+    const rerender = React.useRef(0)
 
     useEffect(()=> {
-        if(imgRef.current) {
+        if(imgRef.current && zoom) {
             imgRef.current.style.transform = `translate(${position.x}px, ${position.y}px)`;
         }
+        console.log(rerender.current++)
     }, [position]);
 
     const onMouseMove = (e) => {
@@ -33,13 +36,29 @@ export const ModalProvider = (props) => {
         }
     }
     
-    // console.log(images)
     const nextImage = () => {
         if (page + 1 < images.length) setPage(prevpage => prevpage + 1);
     }
 
     const previousImage = () => {
         if(page > 0) setPage(prevpage => prevpage - 1);
+    }
+
+    const onZoom = async () => {
+        // console.log(position)
+        await setPosition({x:0, y:0});
+        setZoom(prevZoom => !prevZoom);
+    }
+
+    const onPageButtonClick = async (index) => {
+        if(page !== index) {
+            await setPosition({x:0, y:0});
+            setPage(index)
+        };
+    }
+
+    const Magnify = (localProp) => {
+        return zoom ? <ZoomOut className={localProp.className}/> : <ZoomIn className={localProp.className}/>;
     }
 
     const onClose = () => {
@@ -59,32 +78,48 @@ export const ModalProvider = (props) => {
                     {title}
                 </DialogTitle>
                 <DialogContent dividers className="modalImageContainer"
-                        style={{overflow: "hidden"}}
+                        style={{overflow: "hidden",objectFit: 'contain'}}
                         onMouseMove={ onMouseMove }
                         onMouseDown={()=>setPressed(true)}
                         onMouseUp={()=>setPressed(false)}>
                     <div
-                        ref={imgRef}>
-
+                        ref={imgRef}
+                        style={{width: '100%'}}
+                        >
                         {images.length !== 0? 
                         <img 
                             src={images[page].src} 
                             alt={images[page].alt} 
+                            style={zoom ? {} : {width:'100%'}}
                             draggable="false"
                             /> : null}
                     </div>
                 </DialogContent>
-                <DialogActions>
+                <DialogActions style={{justifyContent:'center'}}>
                     <button 
                         className="cardMiddleLeft fakeButton"
-                        onClick={previousImage}>
+                        onClick={previousImage}
+                        >
                         <ArrowLeftRounded />
                     </button>
                     <button 
                         className="cardMiddleRight fakeButton"
-                        onClick={nextImage}>
+                        onClick={nextImage}
+                        >
                         <ArrowRightOutlined />
                     </button>
+                    <button 
+                        className="cardMiddleBottom"
+                        onClick={onZoom}>
+                        <Magnify className="zoomSize"/>
+                    </button>
+                    {[...new Array(images.length)].map((v,index) =>
+                        <button 
+                            key={index} 
+                            className="pageIndicator"
+                            onClick={(e)=>onPageButtonClick(index)}>
+                            {index + 1}
+                        </button>)}
                 </DialogActions>
             </Dialog>
         </ModalContext.Provider>
