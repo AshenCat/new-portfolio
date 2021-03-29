@@ -141,6 +141,8 @@ hr.rule:after {
   border-bottom: 2px solid #AAA;
   padding: 3px 6px;
   margin: 0 auto;
+  color: black;
+  transition: all .3s ease-in-out;
 }
 
 .prjLink:visited {
@@ -149,6 +151,8 @@ hr.rule:after {
 
 .prjLink:hover {
   cursor: pointer;
+  background: #88888855;
+  transition: all .3s ease-in-out;
 }
 
 .slide {
@@ -174,6 +178,28 @@ hr.rule:after {
 .btnBR {
   right: 5px;
   bottom: 40px;
+}
+
+
+button.fakeButton { 
+  border:none; 
+  border-radius: 10px;
+} 
+
+.cardMiddleLeft {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+}
+
+.cardMiddleRight {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+}
+
+.modalImageContainer {
+  overflow: hidden;
 }
 
 .floatBtn:hover {
