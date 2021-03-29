@@ -44,7 +44,11 @@ const overrideTheme = createMuiTheme({
                 backgroundColor: '#fff',
             }
         },
-        
+        MuiGrid: {
+            container: {
+                flexWrap: 'unset',
+            }
+        }
     }
 })
 
@@ -67,7 +71,7 @@ function Footer() {
         <footer className={classes.footer}>
             <ThemeProvider theme={overrideTheme}>
             <Container>
-                <Typography variant="h4" className={classes.head}>Contact </Typography>
+                <Typography variant="h4" className={classes.head}>Contact</Typography>
                 <form onSubmit={onclick} id="form">
                 <Grid container direction="row" justify="space-evenly">
                     <Grid container item direction="column" xs={12} md={7}>
