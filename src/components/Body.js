@@ -6,8 +6,8 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import Skills from './sections/Skills';
 import Hero from './sections/Hero';
 import Intro from './sections/Intro';
-import { Link } from 'react-router-dom';
 import ProjectListContainer from './sections/Projects/ProjectListContainer';
+import { Link } from 'react-scroll';
 
 function Body(props) {
     const classes = useStyle();
@@ -40,7 +40,7 @@ function Body(props) {
                         <Grid item>
                             <Link   
                                 to="form" 
-                                spy="true" 
+                                spy={true}
                                 smooth="true"
                                 offset={-70}
                                 duration={1500} 
