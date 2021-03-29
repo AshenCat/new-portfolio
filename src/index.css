@@ -155,6 +155,10 @@ hr.rule:after {
   transition: all .3s ease-in-out;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .slide {
   color: #999999aa;
   font-size: 6em;

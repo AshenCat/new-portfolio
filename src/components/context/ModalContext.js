@@ -14,7 +14,7 @@ export const ModalProvider = (props) => {
     const [images, setImages] = React.useState([]);
     const [title, setTitle] = React.useState("");
     const [page, setPage] = React.useState(0);
-    const [pressed, setPressed] = React.useState(false);
+    const pressed = React.useRef(false);
     const [position, setPosition] = React.useState({x:0, y:0});
     const [zoom, setZoom] = React.useState(false)
     const imgRef = React.useRef();
@@ -24,11 +24,14 @@ export const ModalProvider = (props) => {
         if(imgRef.current && zoom) {
             imgRef.current.style.transform = `translate(${position.x}px, ${position.y}px)`;
         }
-        console.log(rerender.current++)
+        console.log('modal rerender count: '+ rerender.current++)
+        return ()=> {
+            setPage(0);
+        }
     }, [position]);
 
     const onMouseMove = (e) => {
-        if(pressed){
+        if(pressed.current){
             setPosition({
                 x: position.x + e.movementX,
                 y: position.y + e.movementY
@@ -52,8 +55,10 @@ export const ModalProvider = (props) => {
 
     const onPageButtonClick = async (index) => {
         if(page !== index) {
-            await setPosition({x:0, y:0});
-            setPage(index)
+            // await setPosition({x:0, y:0});
+            await setPage(index)
+            // console.log("index:"+ index)
+            // console.log("page: "+page)
         };
     }
 
@@ -80,8 +85,8 @@ export const ModalProvider = (props) => {
                 <DialogContent dividers className="modalImageContainer"
                         style={{overflow: "hidden",objectFit: 'contain'}}
                         onMouseMove={ onMouseMove }
-                        onMouseDown={()=>setPressed(true)}
-                        onMouseUp={()=>setPressed(false)}>
+                        onMouseDown={()=>pressed.current = true}
+                        onMouseUp={()=>pressed.current = false}>
                     <div
                         ref={imgRef}
                         style={{width: '100%'}}
@@ -117,7 +122,7 @@ export const ModalProvider = (props) => {
                         <button 
                             key={index} 
                             className="pageIndicator"
-                            onClick={(e)=>onPageButtonClick(index)}>
+                            onClick={()=>onPageButtonClick(index)}>
                             {index + 1}
                         </button>)}
                 </DialogActions>
