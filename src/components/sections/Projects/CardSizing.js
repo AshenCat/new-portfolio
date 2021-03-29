@@ -25,14 +25,14 @@ export default function CardSizing (props) {
         size.x < 800 ? '460px' : '430px'
     },{
         minHeight: 
-        size.x < 321 ? '500px' :
-        size.x < 360 ? '480px' :  
-        size.x < 421 ? '450px' : 
-        size.x < 480 ? '510px' :
-        size.x < 545 ? '570px' : 
-        size.x < 600 ? '550px' : 
-        size.x < 700 ? '470px' : 
-        size.x < 800 ? '420px' : '390px'
+        size.x < 321 ? '560px' :
+        size.x < 360 ? '540px' :  
+        size.x < 421 ? '510px' : 
+        size.x < 480 ? '580px' :
+        size.x < 545 ? '650px' : 
+        size.x < 600 ? '610px' : 
+        size.x < 700 ? '510px' : 
+        size.x < 800 ? '460px' : '450px'
     },{
         minHeight: 
         size.x < 321 ? '510px' :
@@ -53,7 +53,8 @@ export default function CardSizing (props) {
         width: size.x < 480 ? "150px" :"300px", 
         float: 'left', 
         marginRight: '10px', 
-        borderRadius: '5px'};
+        borderRadius: '5px',
+    };
 
     return {
         cardHeight,
