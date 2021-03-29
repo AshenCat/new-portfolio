@@ -26,9 +26,18 @@ export const ModalProvider = (props) => {
         }
         console.log('modal rerender count: '+ rerender.current++)
         return ()=> {
-            setPage(0);
+            // setPage(0);
+            // setZoom(false);
         }
     }, [position]);
+
+    useEffect(()=> {
+        return () => {
+            setPage(0);
+            setZoom(false);
+            console.log('cleanup')
+        }
+    }, [open])
 
     const onMouseMove = (e) => {
         if(pressed.current){
@@ -47,18 +56,18 @@ export const ModalProvider = (props) => {
         if(page > 0) setPage(prevpage => prevpage - 1);
     }
 
-    const onZoom = async () => {
+    const onZoom = () => {
         // console.log(position)
-        await setPosition({x:0, y:0});
+        // setPosition({x:0, y:0});
         setZoom(prevZoom => !prevZoom);
     }
 
-    const onPageButtonClick = async (index) => {
+    const onPageButtonClick = (index) => {
         if(page !== index) {
-            // await setPosition({x:0, y:0});
-            await setPage(index)
+            setPosition({x:0, y:0});
+            setPage(index)
             // console.log("index:"+ index)
-            // console.log("page: "+page)
+            //  console.log("page: "+page)
         };
     }
 
