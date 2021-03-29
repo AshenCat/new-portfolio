@@ -12,7 +12,7 @@ function ProjectTemplate(props) {
     const ImageHandler = () => {
         return img.length !== 0 ?
             // eslint-disable-next-line jsx-a11y/alt-text
-            <img src={img[0].src} alt={img[0]?.alt} style={imageStyle} onClick={onImageClick}/> : null
+            <img src={img[0].src} alt={img[0]?.alt} className="pointer" style={imageStyle} onClick={onImageClick}/> : null
     }
 
     const LinksHandler = () => {
