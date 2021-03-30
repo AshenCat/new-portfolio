@@ -28,7 +28,9 @@ export const ModalProvider = (props) => {
         return ()=> {
             // setPage(0);
             // setZoom(false);
+            // setPosition({x:0,y:0})
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [position]);
 
     useEffect(()=> {

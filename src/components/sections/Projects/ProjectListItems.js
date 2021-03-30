@@ -1,22 +1,6 @@
-// import r1 from '../../../assets/r1.png';
-// import r2 from '../../../assets/r2.png';
-// import r3 from '../../../assets/r3.png';
-// import r4 from '../../../assets/r4.png';
-// import r5 from '../../../assets/r5.png';
-// import ML from '../../../assets/ML.png';
-// import ML1 from '../../../assets/ML2.gif';
-// import ML2 from '../../../assets/ML1.png';
-// import ML3 from '../../../assets/ML3.png';
-// import ML4 from '../../../assets/ML4.png';
-// import TPCFigma from '../../../assets/TPCFigma.png';
-// import tpc1 from '../../../assets/tpc1.png';
-// import tpc2 from '../../../assets/tpc2.png';
-// import tpc3 from '../../../assets/tpc3.png';
-// import tpc4 from '../../../assets/tpc4.png';
 import CardSizing from './CardSizing';
 
 export function ProjectListItems (props) {
-    // console.log(props)
     const {cardHeight} = CardSizing(props)
     
     return [{
