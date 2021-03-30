@@ -66,7 +66,7 @@ function Body(props) {
                         {/* <div className="projectList"> */}
                         
                         {/* Project 1 */}
-                        <ProjectListContainer size={props.size} classes={classes}/>
+                        <ProjectListContainer classes={classes}/>
                         {/* </div> */}
                         {/* Project 2 */}
                         

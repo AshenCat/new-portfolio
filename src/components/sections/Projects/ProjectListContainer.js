@@ -1,15 +1,19 @@
 import React from 'react'
 import ProjectTemplate from './ProjectTemplate'
 import {ProjectListItems} from './ProjectListItems'
-import CardSizing from './CardSizing';
 
 function ProjectListContainer(props) {
     const {classes} = props;
-    const {imageStyle} = CardSizing(props.size)
+    const imageStyle = {
+        width: '200px', 
+        float: 'left', 
+        marginRight: '10px', 
+        borderRadius: '5px',
+    };
     // console.log(classes)
 
     const Projects = () => {
-        const list = ProjectListItems(props.size)
+        const list = ProjectListItems()
         return list.map((project,num) => 
             <ProjectTemplate 
                 key={num}
@@ -19,8 +23,7 @@ function ProjectListContainer(props) {
                 id={project.id}
                 img={project.img}
                 description={project.description}
-                links={project.links} 
-                cardHeight={project.cardHeight}/>)
+                links={project.links}/>)
     };
     
     return (

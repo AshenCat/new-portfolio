@@ -1,5 +1,5 @@
 import { createMuiTheme, ThemeProvider, Typography } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import './index.css'
 import Body from './components/Body';
@@ -19,17 +19,6 @@ const theme = createMuiTheme({
 })
 
 function App() {
-  const [size, setSize] = useState({
-    x: window.innerWidth,
-    y: window.innerHeight
-  });
-
-  const updateSize = () => setSize({
-    x:window.innerWidth,
-    y: window.innerHeight
-  });
-
-  useEffect(()=>(window.onresize = updateSize), []);
   return (
     <ThemeProvider theme={theme}>
       {/* <Nav /> */}
@@ -45,7 +34,7 @@ function App() {
       </Link>
       <ModalProvider>
         <BrowserRouter>
-          <Route exact path="/" component={()=><Body size={size} />} />
+          <Route exact path="/" component={()=><Body />} />
         </BrowserRouter>
       </ModalProvider>
       <Link   
