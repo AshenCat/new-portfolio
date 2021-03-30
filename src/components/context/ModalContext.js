@@ -89,7 +89,8 @@ export const ModalProvider = (props) => {
                 open={open} 
                 onClose={onClose}
                 aria-labelledby="image modal"
-                aria-describedby="Images displayed">
+                aria-describedby="Images displayed"
+                maxWidth="md">
                 <DialogTitle id="ImageTitle" onClose={onClose}>
                     {title}
                 </DialogTitle>

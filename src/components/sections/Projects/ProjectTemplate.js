@@ -4,7 +4,7 @@ import { GitHub, Computer } from '@material-ui/icons';
 import { useModal } from '../../context/ModalContext';
 
 function ProjectTemplate(props) {
-    const { cardHeight, imageStyle, classes } = props;
+    const { imageStyle, classes } = props;
     const { title, id, img, description, links} = props;
 
     const {setOpen, setImages, setTitle} = useModal();
@@ -39,7 +39,10 @@ function ProjectTemplate(props) {
     }
 
     return (
-        <div className="projectItemCard" style={cardHeight}>
+        <div className="projectItemCard"
+        // style={cardHeight}
+        >
+
             <div className="projectItemBox">
                 <div className="projectItem">
                     <h1>{id}</h1>
@@ -52,7 +55,7 @@ function ProjectTemplate(props) {
                                 <ImageHandler />
                                 {description}
                             </Typography>
-                            <Grid container justify="space-evenly" style={{position: 'absolute', bottom: '15px', right: 0, left: 0}}>
+                            <Grid container justify="space-evenly">
                                 <LinksHandler />
                             </Grid>
                         <div style={{clear: 'both'}}></div>

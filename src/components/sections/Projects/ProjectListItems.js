@@ -1,7 +1,4 @@
-import CardSizing from './CardSizing';
-
-export function ProjectListItems (props) {
-    const {cardHeight} = CardSizing(props)
+export function ProjectListItems () {
     
     return [{
         title: "Inventory Management",
@@ -31,8 +28,7 @@ export function ProjectListItems (props) {
         links: [{
             type: "Github",
             href: "https://github.com/AshenCat/capstone-abc-store"
-        }],
-        cardHeight: cardHeight[0]
+        }]
     },
     {
         title: "Restaurant Menu App",
@@ -58,8 +54,7 @@ export function ProjectListItems (props) {
         links: [{
             type: "Demo",
             href: "https://www.futuredining.ca"
-        }],
-        cardHeight: cardHeight[1]
+        }]
     },
     {
         title: "Python Object Detection",
@@ -87,8 +82,7 @@ export function ProjectListItems (props) {
         links: [{
             type: "Github",
             href: "https://github.com/AshenCat/PythonObjectDetection"
-        }],
-        cardHeight: cardHeight[2]
+        }]
     },{
         title: "Tender Plant and Care",
         id: "04",
@@ -110,8 +104,7 @@ export function ProjectListItems (props) {
         }],
         description: `FREELANCE - A collaborative work to create an app to manage a flowerpot shop.
         I worked on several views making sure that it matches the Figma specifications and including the DB queries ensuring that the response is lightweight and only pulling necessary data. In addition to that, I also am the one who set-up the AWS EC2 server to host the project`,
-        links: [],
-        cardHeight: cardHeight[3]
+        links: []
     },
 ]
 };

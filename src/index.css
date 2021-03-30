@@ -55,8 +55,10 @@ body {
   width: 80%;
   max-width: 700px !important;
   min-width: 250px;
-  min-height: 400px;
-  height: auto !important;
+  min-height: 250px;
+  height: fit-content;
+  display: flex;
+  /* height: auto !important; */
   box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
               inset -5px -5px 15px rgba(11, 55, 117, 0.1),
               5px 5px 15px rgba(0,0,0,0.3),
@@ -64,15 +66,17 @@ body {
   border-radius: 15px;
   /* background: #848686; */
   margin: 30px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  
 }
 
 .projectItemBox {
-  position: absolute;
-  height: auto !important;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  bottom: 20px;
+  position: relative;
+  /* height: auto !important; */
+  width: 92%;
+  margin: auto auto;
+  /* padding-bottom: 60px; */
   /* background: #F3F6FF; */
   border: 2px solid #E7EEFF;
   border-radius: 15px;
