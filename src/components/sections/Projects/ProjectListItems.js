@@ -5,22 +5,28 @@ export function ProjectListItems () {
         id: "01",
         img: [{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS0.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS1.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS2.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS3.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS4.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS5.webp`,
-            alt: "IMS project"
+            alt: "IMS project",
+            type: "image"
         }],
         description:    `Capstone - This college project is a collaborative work of three students as a team. 
                         Starting from scratch, we have designed this project by brainstorming ideas of how and IMS system would be. 
@@ -35,19 +41,24 @@ export function ProjectListItems () {
         id: "02",
         img: [{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r1.webp`,
-            alt: "Restaurant Menu"
+            alt: "Restaurant Menu",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r2.webp`,
-            alt: "Restaurant Menu"
+            alt: "Restaurant Menu",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r3.webp`,
-            alt: "Restaurant Menu"
+            alt: "Restaurant Menu",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r4.webp`,
-            alt: "Restaurant Menu"
+            alt: "Restaurant Menu",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r5.webp`,
-            alt: "Restaurant Menu"
+            alt: "Restaurant Menu",
+            type: "image"
         }],
         description: `Freelance - Created a simple frontend application that serves as a restaurant menu. 
         I have worked on Modals to open the food details, toast for notifications, chips for filtering the menu item, and the slider banner for promotions.`,
@@ -60,25 +71,29 @@ export function ProjectListItems () {
         title: "Python Object Detection",
         id: "03",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML.webp`,
-            alt: "Machine Learning Python"
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML2.webm`,
+            alt: "Machine Learning Python",
+            type: "video"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML1.webp`,
-            alt: "Machine Learning Python in GIF"
+            alt: "Machine Learning Python in GIF",
+            type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML2.gif`,
-            alt: "Machine Learning Python"
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML.webp`,
+            alt: "Machine Learning Python",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML3.webp`,
-            alt: "Machine Learning Python"
+            alt: "Machine Learning Python",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML4.webp`,
-            alt: "Machine Learning Python"
+            alt: "Machine Learning Python",
+            type: "image"
         }],
         description: `COLLEGE - Whilst python isn't my most comfortable language, I've had a good time doing this project. 
         Using the Common Objects in Context (COCO) dataset, 
-        I was able to detect objects in my screen in real time. Instead of inputting single image feeds, I modified it to take video feed instead and label all the objects it detects.
-`,
+        I was able to detect objects in my screen in real time. Instead of inputting single image feeds, I modified it to take video feed instead and label all the objects it detects.`,
         links: [{
             type: "Github",
             href: "https://github.com/AshenCat/PythonObjectDetection"
@@ -88,19 +103,24 @@ export function ProjectListItems () {
         id: "04",
         img: [{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/TPCFigma.webp`,
-            alt: "Figma schematic of the project"
+            alt: "Figma schematic of the project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc1.webp`,
-            alt: "TPC project"
+            alt: "TPC project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc2.webp`,
-            alt: "TPC project"
+            alt: "TPC project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc3.webp`,
-            alt: "TPC project"
+            alt: "TPC project",
+            type: "image"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc4.webp`,
-            alt: "TPC project"
+            alt: "TPC project",
+            type: "image"
         }],
         description: `FREELANCE - A collaborative work to create an app to manage a flowerpot shop.
         I worked on several views making sure that it matches the Figma specifications and including the DB queries ensuring that the response is lightweight and only pulling necessary data. In addition to that, I also am the one who set-up the AWS EC2 server to host the project`,
