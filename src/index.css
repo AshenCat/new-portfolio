@@ -68,7 +68,7 @@ body {
   margin: 30px;
   padding-top: 30px;
   padding-bottom: 30px;
-  
+  background: #C1D4FF;
 }
 
 .projectItemBox {
@@ -112,6 +112,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
   height: 100vh;
+  overflow: hidden;
 }
 
 .hideOF {

@@ -1,9 +1,16 @@
 import { Grid, Typography } from '@material-ui/core'
 import { LocationOn } from '@material-ui/icons';
-import React from 'react'
+import React from 'react';
+import Aos from 'aos';
+import "aos/dist/aos.css";
 
 function Intro(props) {
     const { classes } = props;
+
+    React.useEffect(()=>{
+        Aos.init({duration: 2000});
+    }, [])
+
     return (
         <div className="panel">
                 <Grid container className={classes.intro}>
@@ -17,16 +24,21 @@ function Intro(props) {
                         </ThemeProvider> */}
                         
                         <Grid container direction="column" className={classes.meNameContainer}>
-                            <Typography variant="h2" className={classes.meName}>
-                                Hi, I'm Klifford.
-                            </Typography>
-                            <Grid container item alignItems="center" className={classes.loc}>
-                                <LocationOn style={{fontSize: "inherit"}} />
-                                <Typography style={{fontSize: "inherit"}}>Toronto, Ontario</Typography>
-                            </Grid>
+                            <div data-aos="fade-left" data-aos-delay="250">
+                                <Typography variant="h2" className={classes.meName}>
+                                    <span>Hi, I'm Klifford.</span>
+                                </Typography>
+                            </div>
+                            <div data-aos="fade-left" data-aos-delay="250">
+                                <Grid container item alignItems="center" className={classes.loc}>
+                                    <LocationOn style={{fontSize: "inherit"}} />
+                                    <Typography style={{fontSize: "inherit"}}><span>Toronto, Ontario</span></Typography>
+                                </Grid>
+                            </div>
                         </Grid>
                         <Typography variant="h4" className={classes.meInfo}>
-                            I am a passionate web developer with a curious mindset. The internet has always piqued my interest which led me to pursue a career in web development. On my free time, I do my personal projects which involves coding and some electronics. Here's some of my projects from freelancing and school.
+                            <span data-aos="fade-right">I am a passionate web developer with a curious mindset. The internet has always piqued my interest which led me to pursue a career in web development. </span> 
+                            <span data-aos="fade-right">On my free time, I do my personal projects which involves coding and some electronics. Here's some of my projects from freelancing and school.</span>
                         </Typography>
                     </Grid>
                 </Grid>
