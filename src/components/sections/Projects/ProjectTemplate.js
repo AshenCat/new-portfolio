@@ -23,7 +23,7 @@ function ProjectTemplate(props) {
                     :
                     <video autoPlay loop muted playsInline style={imageStyle} onClick={onImageClick}>
                         <source src={img[0].src} type="video/webm"></source>
-                        <p>Your browser doesn't support HTML5 video. Here is a <a href={img[0].src}>link to the video</a> instead.</p>
+                        Your browser doesn't support HTML5 video. Here is a <a href={img[0].src}>link to the video</a> instead.
                     </video>
                 : null
             :null;
