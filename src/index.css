@@ -217,8 +217,19 @@ button.fakeButton:hover {
   bottom: 60px;
 }
 
-.pageIndicator {
+.cardMedia {
   /* padding: 0; */
+    /* // const imageStyle = {
+      //     width: '200px', 
+      //     float: 'left', 
+      //     marginRight: '10px', 
+      //     borderRadius: '5px',
+      // }; */
+      width: 200px;
+      float: left;
+      margin-right: 10px;
+      border-radius: 5px;
+      cursor: pointer;
 }
 
 .zoomSize {
