@@ -1,5 +1,5 @@
 import { createMuiTheme, makeStyles } from '@material-ui/core'
-import prgimage from '../assets/projects1.webp'
+import prgimage from '../assets/projects1.jpg'
 
 export const useStyle =  makeStyles( theme => ({
     textCenter : {
