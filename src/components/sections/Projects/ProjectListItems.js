@@ -4,22 +4,22 @@ export function ProjectListItems () {
         title: "Inventory Management",
         id: "01",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS0.jpg`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS0.webp`,
             alt: "IMS project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS1.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS1.webp`,
             alt: "IMS project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS2.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS2.webp`,
             alt: "IMS project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS3.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS3.webp`,
             alt: "IMS project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS4.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS4.webp`,
             alt: "IMS project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS5.PNG`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS5.webp`,
             alt: "IMS project"
         }],
         description:    `Capstone - This college project is a collaborative work of three students as a team. 
@@ -34,19 +34,19 @@ export function ProjectListItems () {
         title: "Restaurant Menu App",
         id: "02",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r1.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r1.webp`,
             alt: "Restaurant Menu"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r2.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r2.webp`,
             alt: "Restaurant Menu"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r3.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r3.webp`,
             alt: "Restaurant Menu"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r4.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r4.webp`,
             alt: "Restaurant Menu"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r5.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r5.webp`,
             alt: "Restaurant Menu"
         }],
         description: `Freelance - Created a simple frontend application that serves as a restaurant menu. 
@@ -60,19 +60,19 @@ export function ProjectListItems () {
         title: "Python Object Detection",
         id: "03",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML.webp`,
             alt: "Machine Learning Python"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML1.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML1.webp`,
             alt: "Machine Learning Python in GIF"
         },{
             src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML2.gif`,
             alt: "Machine Learning Python"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML3.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML3.webp`,
             alt: "Machine Learning Python"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML4.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML4.webp`,
             alt: "Machine Learning Python"
         }],
         description: `COLLEGE - Whilst python isn't my most comfortable language, I've had a good time doing this project. 
@@ -87,19 +87,19 @@ export function ProjectListItems () {
         title: "Tender Plant and Care",
         id: "04",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/TPCFigma.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/TPCFigma.webp`,
             alt: "Figma schematic of the project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc1.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc1.webp`,
             alt: "TPC project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc2.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc2.webp`,
             alt: "TPC project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc3.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc3.webp`,
             alt: "TPC project"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc4.png`,
+            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc4.webp`,
             alt: "TPC project"
         }],
         description: `FREELANCE - A collaborative work to create an app to manage a flowerpot shop.
