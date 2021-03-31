@@ -4,12 +4,6 @@ import {ProjectListItems} from './ProjectListItems'
 
 function ProjectListContainer(props) {
     const {classes} = props;
-    const imageStyle = {
-        width: '200px', 
-        float: 'left', 
-        marginRight: '10px', 
-        borderRadius: '5px',
-    };
     // console.log(classes)
 
     const Projects = () => {
@@ -17,7 +11,6 @@ function ProjectListContainer(props) {
         return list.map((project,num) => 
             <ProjectTemplate 
                 key={num}
-                imageStyle={imageStyle}
                 classes={classes}
                 title={project.title}
                 id={project.id}

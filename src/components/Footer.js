@@ -31,6 +31,11 @@ const useStyle = makeStyles( theme => ({
             color: 'blue',
         },
         textDecoration: "none"
+    }, 
+    hr :{
+        border: `0`,
+        height: `1px`,
+        backgroundImage: `linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))`,
     }
 }))
 
@@ -44,11 +49,12 @@ const overrideTheme = createMuiTheme({
                 backgroundColor: '#fff',
             }
         },
-        MuiGrid: {
-            container: {
-                flexWrap: 'unset',
-            }
-        }
+        // MuiGrid: {
+        //     container: {
+        //         flexWrap: 'unset',
+        //     }
+        // }
+        
     }
 })
 
@@ -74,7 +80,7 @@ function Footer() {
                 <Typography variant="h4" className={classes.head}>Contact</Typography>
                 <form onSubmit={onclick} id="form">
                 <Grid container direction="row" justify="space-evenly">
-                    <Grid container item direction="column" xs={12} md={7}>
+                    <Grid container item xs={12} md={7}>
                         <Grid item xs={12}>
                             <TextField value="you" type="hidden"/>
                         </Grid>
@@ -107,7 +113,7 @@ function Footer() {
                                 I'll try to respond as soon as I can. Don't forget to add your email if you expect a reply.
                             </Typography>
                         <Grid item>
-                            <hr />
+                            <hr className={classes.hr}/>
                             <Typography variant="h6">
                                 Media credits:<br />
                             </Typography>

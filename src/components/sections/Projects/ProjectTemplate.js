@@ -4,7 +4,7 @@ import { GitHub, Computer } from '@material-ui/icons';
 import { useModal } from '../../context/ModalContext';
 
 function ProjectTemplate(props) {
-    const { imageStyle, classes } = props;
+    const { classes } = props;
     const { title, id, img, description, links} = props;
 
     const {setOpen, setImages, setTitle} = useModal();
@@ -17,13 +17,13 @@ function ProjectTemplate(props) {
                     src={img[0].src} 
                     alt={img[0].alt} 
                     draggable="false"
-                    style={imageStyle}
+                    className="cardMedia"
                     onClick={onImageClick}
                     />
                     :
-                    <video autoPlay loop muted playsInline style={imageStyle} onClick={onImageClick}>
+                    <video autoPlay loop muted playsInline className="cardMedia" onClick={onImageClick}>
                         <source src={img[0].src} type="video/webm"></source>
-                        <p>Your browser doesn't support HTML5 video. Here is a <a href={img[0].src}>link to the video</a> instead.</p>
+                        Your browser doesn't support HTML5 video. Here is a <a href={img[0].src}>link to the video</a> instead.
                     </video>
                 : null
             :null;
