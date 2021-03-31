@@ -104,12 +104,19 @@ export const ModalProvider = (props) => {
                         style={{width: '100%'}}
                         >
                         {images.length !== 0? 
+                        images[page].type === "image" ?  
                         <img 
                             src={images[page].src} 
                             alt={images[page].alt} 
                             style={zoom ? {} : {width:'100%'}}
                             draggable="false"
-                            /> : null}
+                            />
+                            :
+                            <video autoPlay loop muted playsInline>
+                                <source src={images[page].src} type="video/webm"></source>
+                                <p>Your browser doesn't support HTML5 video. Here is a <a href={images[page].src}>link to the video</a> instead.</p>
+                            </video>
+                        : null}
                     </div>
                 </DialogContent>
                 <DialogActions style={{justifyContent:'center'}}>

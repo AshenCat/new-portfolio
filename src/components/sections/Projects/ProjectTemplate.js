@@ -11,8 +11,22 @@ function ProjectTemplate(props) {
 
     const ImageHandler = () => {
         return img.length !== 0 ?
-            // eslint-disable-next-line jsx-a11y/alt-text
-            <img src={img[0].src} alt={img[0]?.alt} className="pointer" style={imageStyle} onClick={onImageClick}/> : null
+            img.length !== 0? 
+                img[0].type === "image" ?  
+                <img 
+                    src={img[0].src} 
+                    alt={img[0].alt} 
+                    draggable="false"
+                    style={imageStyle}
+                    onClick={onImageClick}
+                    />
+                    :
+                    <video autoPlay loop muted playsInline style={imageStyle} onClick={onImageClick}>
+                        <source src={img[0].src} type="video/webm"></source>
+                        <p>Your browser doesn't support HTML5 video. Here is a <a href={img[0].src}>link to the video</a> instead.</p>
+                    </video>
+                : null
+            :null;
     }
 
     const LinksHandler = () => {
