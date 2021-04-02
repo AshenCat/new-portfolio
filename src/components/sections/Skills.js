@@ -17,13 +17,13 @@ function Skills() {
                     <Typography variant="subtitle2">React</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="250">
                 <span>
                     <i className="slide fab fa-vuejs"></i>
                     <Typography variant="subtitle2">Vue</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="500">
                 <span>
                     <i className="slide fab fa-node"></i>
                     <Typography variant="subtitle2">Nodejs</Typography>
@@ -35,13 +35,13 @@ function Skills() {
                     <Typography variant="subtitle2">HTML5</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="250">
                 <span>
                     <i className="slide fab fa-css3-alt"></i>
                     <Typography variant="subtitle2">CSS3</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="500">
                 <span>
                     <i className="slide fab fa-js-square"></i>
                     <Typography variant="subtitle2">Javascript</Typography>
@@ -53,13 +53,13 @@ function Skills() {
                     <Typography variant="subtitle2">MySQL</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="250">
                 <span>
                     <i className="slide fas fa-database"></i>
                     <Typography variant="subtitle2">MongoDB</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="500">
                 <span>
                     <i className="slide fab fa-bootstrap"></i>
                     <Typography variant="subtitle2">Bootstrap</Typography>
@@ -71,7 +71,7 @@ function Skills() {
                     <Typography variant="subtitle2">Material Design</Typography>
                 </span>
             </li>
-            <li data-aos="fade-up">
+            <li data-aos="fade-up" data-aos-delay="250">
                 <span>
                     <i className="slide fab fa-angular"></i>
                     <Typography variant="subtitle2">Angular</Typography>
