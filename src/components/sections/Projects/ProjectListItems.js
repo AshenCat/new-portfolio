@@ -1,30 +1,52 @@
+import CS0 from "../../../assets/CS0.webp";
+import CS1 from "../../../assets/CS1.webp";
+import CS2 from "../../../assets/CS2.webp";
+import CS3 from "../../../assets/CS3.webp";
+import CS4 from "../../../assets/CS4.webp";
+import CS5 from "../../../assets/CS5.webp";
+import ML from "../../../assets/ML.webp";
+import ML1 from "../../../assets/ML1.webp";
+import ML2 from "../../../assets/ML2.webm";
+import ML3 from "../../../assets/ML3.webp";
+import ML4 from "../../../assets/ML4.webp";
+import r1 from "../../../assets/r1.webp";
+import r2 from "../../../assets/r2.webp";
+import r3 from "../../../assets/r3.webp";
+import r4 from "../../../assets/r4.webp";
+import r5 from "../../../assets/r5.webp";
+import tpc1 from "../../../assets/tpc1.webp";
+import tpc2 from "../../../assets/tpc2.webp";
+import tpc3 from "../../../assets/tpc3.webp";
+import tpc4 from "../../../assets/tpc4.webp";
+import TPCFigma from "../../../assets/TPCFigma.webp";
+
 export function ProjectListItems () {
     
     return [{
         title: "Inventory Management",
         id: "01",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS0.webp`,
+            src: CS0,
             alt: "IMS project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS1.webp`,
+            src: CS1,
             alt: "IMS project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS2.webp`,
+            src: CS2,
             alt: "IMS project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS3.webp`,
+            src: CS3,
             alt: "IMS project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS4.webp`,
+            src: CS4,
             alt: "IMS project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/CS5.webp`,
+            src: CS5,
             alt: "IMS project",
             type: "image"
         }],
@@ -40,23 +62,23 @@ export function ProjectListItems () {
         title: "Restaurant Menu App",
         id: "02",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r1.webp`,
+            src: r1,
             alt: "Restaurant Menu",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r2.webp`,
+            src: r2,
             alt: "Restaurant Menu",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r3.webp`,
+            src: r3,
             alt: "Restaurant Menu",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r4.webp`,
+            src: r4,
             alt: "Restaurant Menu",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/r5.webp`,
+            src: r5,
             alt: "Restaurant Menu",
             type: "image"
         }],
@@ -71,23 +93,23 @@ export function ProjectListItems () {
         title: "Python Object Detection",
         id: "03",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML2.webm`,
+            src: ML2,
             alt: "Machine Learning Python",
             type: "video"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML1.webp`,
+            src: ML1,
             alt: "Machine Learning Python in GIF",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML.webp`,
+            src: ML,
             alt: "Machine Learning Python",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML3.webp`,
+            src: ML3,
             alt: "Machine Learning Python",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/ML4.webp`,
+            src: ML4,
             alt: "Machine Learning Python",
             type: "image"
         }],
@@ -102,23 +124,23 @@ export function ProjectListItems () {
         title: "Tender Plant and Care",
         id: "04",
         img: [{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/TPCFigma.webp`,
+            src: TPCFigma,
             alt: "Figma schematic of the project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc1.webp`,
+            src: tpc1,
             alt: "TPC project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc2.webp`,
+            src: tpc2,
             alt: "TPC project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc3.webp`,
+            src: tpc3,
             alt: "TPC project",
             type: "image"
         },{
-            src: `https://hostedsitebucket.s3.amazonaws.com/GDRIVE/tpc4.webp`,
+            src: tpc4,
             alt: "TPC project",
             type: "image"
         }],
