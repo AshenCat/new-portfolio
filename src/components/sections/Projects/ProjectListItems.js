@@ -1,24 +1,24 @@
-import CS0 from "../../../assets/CS0.webp";
-import CS1 from "../../../assets/CS1.webp";
-import CS2 from "../../../assets/CS2.webp";
-import CS3 from "../../../assets/CS3.webp";
-import CS4 from "../../../assets/CS4.webp";
-import CS5 from "../../../assets/CS5.webp";
-import ML from "../../../assets/ML.webp";
-import ML1 from "../../../assets/ML1.webp";
+import CS0 from "../../../assets/CS0.jpg";
+import CS1 from "../../../assets/CS1.png";
+import CS2 from "../../../assets/CS2.png";
+import CS3 from "../../../assets/CS3.png";
+import CS4 from "../../../assets/CS4.png";
+import CS5 from "../../../assets/CS5.png";
+import ML from "../../../assets/ML.png";
+import ML1 from "../../../assets/ML1.png";
 import ML2 from "../../../assets/ML2.webm";
-import ML3 from "../../../assets/ML3.webp";
-import ML4 from "../../../assets/ML4.webp";
-import r1 from "../../../assets/r1.webp";
-import r2 from "../../../assets/r2.webp";
-import r3 from "../../../assets/r3.webp";
-import r4 from "../../../assets/r4.webp";
-import r5 from "../../../assets/r5.webp";
-import tpc1 from "../../../assets/tpc1.webp";
-import tpc2 from "../../../assets/tpc2.webp";
-import tpc3 from "../../../assets/tpc3.webp";
-import tpc4 from "../../../assets/tpc4.webp";
-import TPCFigma from "../../../assets/TPCFigma.webp";
+import ML3 from "../../../assets/ML3.png";
+import ML4 from "../../../assets/ML4.png";
+import r1 from "../../../assets/r1.png";
+import r2 from "../../../assets/r2.png";
+import r3 from "../../../assets/r3.png";
+import r4 from "../../../assets/r4.png";
+import r5 from "../../../assets/r5.png";
+import tpc1 from "../../../assets/tpc1.png";
+import tpc2 from "../../../assets/tpc2.png";
+import tpc3 from "../../../assets/tpc3.png";
+import tpc4 from "../../../assets/tpc4.png";
+import TPCFigma from "../../../assets/TPCFigma.png";
 
 export function ProjectListItems () {
     
@@ -93,17 +93,17 @@ export function ProjectListItems () {
         title: "Python Object Detection",
         id: "03",
         img: [{
-            src: ML2,
+            src: ML,
             alt: "Machine Learning Python",
-            type: "video"
+            type: "image"
         },{
             src: ML1,
             alt: "Machine Learning Python in GIF",
             type: "image"
         },{
-            src: ML,
+            src: ML2,
             alt: "Machine Learning Python",
-            type: "image"
+            type: "video"
         },{
             src: ML3,
             alt: "Machine Learning Python",
