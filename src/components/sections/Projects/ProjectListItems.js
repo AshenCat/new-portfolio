@@ -19,6 +19,7 @@
 // import tpc3 from "../../../assets/tpc3.png";
 // import tpc4 from "../../../assets/tpc4.png";
 // import TPCFigma from "../../../assets/TPCFigma.png";
+import cx0 from "../../../assets/catflix.png"
 
 export function ProjectListItems () {
     
@@ -43,6 +44,7 @@ export function ProjectListItems () {
     const tpc3 = "https://i.imgur.com/wH8ApDm.png";
     const tpc4 = "https://i.imgur.com/e78iqIX.png";
     const TPCFigma = "https://i.imgur.com/45Yu9Bp.png";
+    // const cx0 = ;
 
     return [{
         title: "Inventory Management",
@@ -169,6 +171,19 @@ export function ProjectListItems () {
         description: `FREELANCE - A collaborative work to create an app to manage a flowerpot shop.
         I worked on several views making sure that it matches the Figma specifications and including the DB queries ensuring that the response is lightweight and only pulling necessary data. In addition to that, I also am the one who set-up the AWS EC2 server to host the project`,
         links: []
-    },
+    },{
+        title: "Catflix CMS",
+        id: "05",
+        img: [{
+            src: cx0,
+            alt: "Catflix^tm",
+            type: "image"
+        }],
+        description: `Currently working on a MERN stack project that uses best practices and efficient code patterns that I picked up. The project is fully responsive, lightweight, handles auth using PassportJS local, unit testing on every page, and is visually appealing with a bunch of transition animations. I invite you to check my github link below.`,
+        links: [{
+            type: "Github",
+            href: "https://github.com/AshenCat/catflix"
+        }]
+    }
 ]
 };
